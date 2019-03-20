@@ -1,0 +1,6 @@
+framework module Pods_AroundHear {
+  umbrella header "Pods-AroundHear-umbrella.h"
+
+  export *
+  module * { export * }
+}
