@@ -95,14 +95,14 @@ A music social media app that lets users listen to what other users are currentl
 **Flow Navigation** (Screen to Screen)
 
 * Login screen
-  => Main interface
+  => Main Interface
 * Main Interface
-  => Map screen
+  => Main screen
   => Profile screen
-  => Music screen
-* Map Screen
+  => Play screen
+* Play Screen
   => Other user profile
-  => Other user music screen
+  => Other user play screen
 * Profile Screen
   => Chat screen
 
