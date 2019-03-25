@@ -111,6 +111,12 @@ A music social media app that lets users listen to what other users are currentl
 <img src="https://i.imgur.com/dA3iY2U.jpg" width=600>
 <img src="https://i.imgur.com/3PGZinx.jpg" width=600>
 
+## Data Models
+
+* User
+  IPhone Xs                                                     |IPhone 8       |   IPhone SE Landscape           
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
