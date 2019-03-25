@@ -113,40 +113,22 @@ A music social media app that lets users listen to what other users are currentl
 
 ## Data Models
 
-
- Property                                                     |Type       |   Description           
+* User
+ Property         |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 id|int|Unique id for a use
 username|String|Username from spotify
 password|String|Users password
 author|String|Full name of user
-|image
-|File
-|Profile picture of the user
-|email
-|String
-|Users email
-|description
-|String
-|Description of user’s music taste
-|listeners
-|int[]
-|A list of people that listen to a given user
-|favoriteSongs
-|String
-|Users favorite song on profile
-|musicRooms
-|String[]
-|A list of music rooms a user is following
-|currentMusic
-|String
-|Music the user is currently listening to/last played song
-|chatIds
-|int[]
-|A list of chat ids the user is currently in
-|Coordinates
-|geoLocation
-|Location of the user
+image|File|Profile picture of the user
+email|String|Users email
+description|String|Description of user’s music taste
+listeners|int[]|A list of people that listen to a given user
+favoriteSongs|String|Users favorite song on profile
+musicRooms|String[]|A list of music rooms a user is following
+currentMusic|String|Music the user is currently listening to/last played song
+chatIds|int[]|A list of chat ids the user is currently in
+Coordinates|geoLocation|Location of the user
 
 ### [BONUS] Digital Wireframes & Mockups
 
