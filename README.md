@@ -146,41 +146,38 @@ id|String|The user that is being listened to
 listenerId|String[]|A list of user ids that are listeners
 
 ## Parse Network Requests
-* Login Screen
-=> Get - check if user already exists
-=> Get - authorize Spotify
-* Sign Up
-Post - send login information and add into database if nonexistent 
-Home Screen
-Post - current geo location constantly
-Get - users’ locations in your radius	
-Get - current music
-Get - profile picture
-* Profile Page
-Put - profile picture
-Get - user’s name
-Get - description
-Get - # of listeners
-Get - # of listenTo’s
-Get - favorite songs
-* Chat Screen
-Get - chat log
-Get - current music
-* Message Screen
-Get - message log
-Post - message(s)
-* Play Screen
-Get - current song
-Get - album cover
-Get - name
-Post - in order to like a song
-Get - when someone likes a message
-* My Music Screen
-Get - user’s playlist
-Get - user’s current songs
+**Login Screen**
+  * Get - check if user already exists
+  * Get - authorize Spotify
+**Sign Up**
+  * Post - send login information and add into database if nonexistent 
+**Home Screen**
+  * Post - current geo location constantly
+  * Get - users’ locations in your radius	
+  * Get - current music
+  * Get - profile picture
+**Profile Page**
+  * Put - profile picture
+  * Get - user’s name
+  * Get - description
+  * Get - # of listeners
+  * Get - # of listenTo’s
+  * Get - favorite songs
+**Chat Screen**
+  * Get - chat log
+  * Get - current music
+**Message Screen**
+  * Get - message log
+  * Post - message(s)
+**Play Screen**
+  * Get - current song
+  * Get - album cover
+  * Get - name
+  * Post - in order to like a song
+  * Get - when someone likes a message
+**My Music Screen**
+  * Get - user’s playlist
+  * Get - user’s current songs
 
 
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
