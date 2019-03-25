@@ -164,25 +164,34 @@ listenerId|String[]|A list of user ids that are listeners
   * Get - profile picture
   
 **Profile Page**
+
   * Put - profile picture
   * Get - user’s name
   * Get - description
   * Get - # of listeners
   * Get - # of listenTo’s
   * Get - favorite songs
+  
 **Chat Screen**
+
   * Get - chat log
   * Get - current music
+  
 **Message Screen**
+
   * Get - message log
   * Post - message(s)
+  
 **Play Screen**
+
   * Get - current song
   * Get - album cover
   * Get - name
   * Post - in order to like a song
   * Get - when someone likes a message
+  
 **My Music Screen**
+
   * Get - user’s playlist
   * Get - user’s current songs
 
