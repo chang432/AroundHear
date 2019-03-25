@@ -117,6 +117,7 @@ A music social media app that lets users listen to what other users are currentl
  Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 h|m |q
+h|e |e
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
