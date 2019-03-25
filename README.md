@@ -131,6 +131,21 @@ currentMusic|String|Music the user is currently listening to/last played song
 chatIds|int[]|A list of chat ids the user is currently in
 Coordinates|geoLocation|Location of the user
 
+* Chat
+
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
+chatId|int|Unique identifier for each conversation between two users
+messages|String[]|Conversation between users
+
+* Listeners
+
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
+id|String|The user that is being listened to
+listenerId|String[]|A list of user ids that are listeners
+
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
