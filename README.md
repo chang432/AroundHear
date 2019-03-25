@@ -114,9 +114,9 @@ A music social media app that lets users listen to what other users are currentl
 ## Data Models
 
 * User
-  IPhone Xs                                                     |IPhone 8       |   IPhone SE Landscape           
+  Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-
+| |
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
