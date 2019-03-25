@@ -146,16 +146,23 @@ id|String|The user that is being listened to
 listenerId|String[]|A list of user ids that are listeners
 
 ## Parse Network Requests
+
 **Login Screen**
+
   * Get - check if user already exists
   * Get - authorize Spotify
+  
 **Sign Up**
+
   * Post - send login information and add into database if nonexistent 
+  
 **Home Screen**
+
   * Post - current geo location constantly
   * Get - users’ locations in your radius	
   * Get - current music
   * Get - profile picture
+  
 **Profile Page**
   * Put - profile picture
   * Get - user’s name
