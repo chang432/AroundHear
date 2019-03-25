@@ -114,7 +114,7 @@ A music social media app that lets users listen to what other users are currentl
 ## Data Models
 
 * User
- Property         |Type       |   Description           
+ Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 id|int|Unique id for a use
 username|String|Username from spotify
