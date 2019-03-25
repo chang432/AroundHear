@@ -113,10 +113,10 @@ A music social media app that lets users listen to what other users are currentl
 
 ## Data Models
 
-* User
-  Property                                                     |Type       |   Description           
+
+ Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-| |
+h|m |q
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
