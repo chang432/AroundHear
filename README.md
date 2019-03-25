@@ -114,6 +114,7 @@ A music social media app that lets users listen to what other users are currentl
 ## Data Models
 
 * User
+
  Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 id|int|Unique id for a use
@@ -123,7 +124,7 @@ author|String|Full name of user
 image|File|Profile picture of the user
 email|String|Users email
 description|String|Description of user’s music taste
-listeners|int[]|A list of people that listen to a given user
+listeners|int[] |A list of people that listen to a given user
 favoriteSongs|String|Users favorite song on profile
 musicRooms|String[]|A list of music rooms a user is following
 currentMusic|String|Music the user is currently listening to/last played song
