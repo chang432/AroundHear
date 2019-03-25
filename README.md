@@ -116,8 +116,45 @@ A music social media app that lets users listen to what other users are currentl
 
  Property                                                     |Type       |   Description           
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-h|m |q
-h|e |e
+id|int|
+|Unique id for a user
+|username
+|String
+|Username from spotify
+|password
+|String
+|Users password
+|author
+|String
+|Full name of user
+|image
+|File
+|Profile picture of the user
+|email
+|String
+|Users email
+|description
+|String
+|Description of user’s music taste
+|listeners
+|int[]
+|A list of people that listen to a given user
+|favoriteSongs
+|String
+|Users favorite song on profile
+|musicRooms
+|String[]
+|A list of music rooms a user is following
+|currentMusic
+|String
+|Music the user is currently listening to/last played song
+|chatIds
+|int[]
+|A list of chat ids the user is currently in
+|Coordinates
+|geoLocation
+|Location of the user
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
