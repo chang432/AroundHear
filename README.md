@@ -115,8 +115,8 @@ A music social media app that lets users listen to what other users are currentl
 
 * User
 
-Property|Type|Description           
-:-------------------------:|:-----------------------:|----------------------:
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
 id|int|Unique id for a use
 username|String|Username from spotify
 password|String|Users password
