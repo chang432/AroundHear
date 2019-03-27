@@ -24,6 +24,8 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - FirebaseUI/Auth (4.5.5):
+    - Firebase/Auth (~> 4.2)
   - Firestore (0.7.0):
     - FirebaseAnalytics (~> 4.0)
     - FirebaseAuth (~> 4.1)
@@ -74,6 +76,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
+  - FirebaseUI/Auth
   - Firestore (from `https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json`)
 
 SPEC REPOS:
@@ -84,6 +87,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseInstanceID
+    - FirebaseUI
     - GoogleToolboxForMac
     - gRPC
     - gRPC-Core
@@ -105,6 +109,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: bf22cacf22c60ab454bf2636f556d8892b10b53f
   FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
   Firestore: 5a33dcb27d8d33d4e82e032ee31ecd2904a72167
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   gRPC: 77d2866b3ce1e187b2239d8adba48b98d9524c15
@@ -116,6 +121,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
 
-PODFILE CHECKSUM: 907c2b63f127af77405774b5e4a73ae8039ce752
+PODFILE CHECKSUM: 7270b52105247b2b5fd13e07566bd2168b1f561d
 
 COCOAPODS: 1.5.3

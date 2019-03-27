@@ -18,6 +18,7 @@
 		991CCA1B2241AFB400492DB2 /* AroundHearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA1A2241AFB400492DB2 /* AroundHearTests.swift */; };
 		991CCA262241AFB400492DB2 /* AroundHearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA252241AFB400492DB2 /* AroundHearUITests.swift */; };
 		991CCA342241B68F00492DB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991CCA332241B68F00492DB2 /* GoogleService-Info.plist */; };
+		99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		991CCA252241AFB400492DB2 /* AroundHearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundHearUITests.swift; sourceTree = "<group>"; };
 		991CCA272241AFB400492DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991CCA332241B68F00492DB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		AAADEC5C1600EB8BC078BBFE /* Pods-AroundHearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearUITests/Pods-AroundHearUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C487993BE988B522412F6F /* Pods-AroundHear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHear/Pods-AroundHear.debug.xcconfig"; sourceTree = "<group>"; };
 		DD180A9E515F3BA4DA2D1418 /* Pods-AroundHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearUITests/Pods-AroundHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				991CCA0C2241AFB400492DB2 /* Assets.xcassets */,
 				991CCA0E2241AFB400492DB2 /* LaunchScreen.storyboard */,
 				991CCA112241AFB400492DB2 /* Info.plist */,
+				99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */,
 			);
 			path = AroundHear;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				991CC9FF2241AFB300492DB2 /* Frameworks */,
 				991CCA002241AFB300492DB2 /* Resources */,
 				079F5A9572CE9EF71B40D3F9 /* [CP] Embed Pods Frameworks */,
+				6BCA1A285D7FA900FBFAB16E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,6 +366,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6BCA1A285D7FA900FBFAB16E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AroundHear/Pods-AroundHear-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AroundHear/Pods-AroundHear-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		845B30813C7F3B70677B6F6D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */,
 				991CCA082241AFB300492DB2 /* ViewController.swift in Sources */,
 				991CCA062241AFB300492DB2 /* AppDelegate.swift in Sources */,
 			);
