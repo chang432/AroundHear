@@ -131,9 +131,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Svk-MZ-N4o" kind="relationship" relationship="viewControllers" id="U6v-gl-4Pl"/>
-                        <segue destination="H5r-A4-J3v" kind="relationship" relationship="viewControllers" id="zU9-BJ-Ix0"/>
-                        <segue destination="Jnp-WS-tOn" kind="relationship" relationship="viewControllers" id="Ly1-Si-G4g"/>
+                        <segue destination="weR-nW-smL" kind="relationship" relationship="viewControllers" id="q4r-0A-s2O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weG-np-8KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,34 +139,20 @@
             <point key="canvasLocation" x="940" y="1068"/>
         </scene>
         <!--myMusic-->
-        <scene sceneID="5oP-HN-tiO">
+        <scene sceneID="bXy-cq-i2W">
             <objects>
-                <viewControllerPlaceholder storyboardName="myMusic" id="Svk-MZ-N4o" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="PTQ-wV-usE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ckc-Ec-zFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="weR-nW-smL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2lM-L6-IUh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rVg-jE-P2J"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="myMusic" id="6N0-Ov-ec8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9K-wj-fd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="780"/>
-        </scene>
-        <!--home-->
-        <scene sceneID="EwS-Js-acR">
-            <objects>
-                <viewControllerPlaceholder storyboardName="home" id="H5r-A4-J3v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0mF-FS-AiK"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hk-Gy-gix" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1856" y="1067"/>
-        </scene>
-        <!--profile-->
-        <scene sceneID="Dcs-id-Cwq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="profile" id="Jnp-WS-tOn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Gw-T2-Ara"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lOR-id-B4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1845" y="1355"/>
+            <point key="canvasLocation" x="1905" y="692"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CO4-LK-VuL">
