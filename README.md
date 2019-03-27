@@ -95,14 +95,14 @@ A music social media app that lets users listen to what other users are currentl
 **Flow Navigation** (Screen to Screen)
 
 * Login screen
-  => Main interface
+  => Main Interface
 * Main Interface
-  => Map screen
+  => Main screen
   => Profile screen
-  => Music screen
-* Map Screen
+  => Play screen
+* Play Screen
   => Other user profile
-  => Other user music screen
+  => Other user play screen
 * Profile Screen
   => Chat screen
 
@@ -111,6 +111,89 @@ A music social media app that lets users listen to what other users are currentl
 <img src="https://i.imgur.com/dA3iY2U.jpg" width=600>
 <img src="https://i.imgur.com/3PGZinx.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+## Data Models
 
-### [BONUS] Interactive Prototype
+* User
+
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
+id|int|Unique id for a use
+username|String|Username from spotify
+password|String|Users password
+author|String|Full name of user
+image|File|Profile picture of the user
+email|String|Users email
+description|String|Description of user’s music taste
+listeners|int[] |A list of people that listen to a given user
+favoriteSongs|String|Users favorite song on profile
+musicRooms|String[]|A list of music rooms a user is following
+currentMusic|String|Music the user is currently listening to/last played song
+chatIds|int[]|A list of chat ids the user is currently in
+Coordinates|geoLocation|Location of the user
+
+* Chat
+
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
+chatId|int|Unique identifier for each conversation between two users
+messages|String[]|Conversation between users
+
+* Listeners
+
+Property|Type|Description
+:--------------:|:----------------:|:------------------:
+id|String|The user that is being listened to
+listenerId|String[]|A list of user ids that are listeners
+
+## Parse Network Requests
+
+**Login Screen**
+
+  * Get - check if user already exists
+  * Get - authorize Spotify
+  
+**Sign Up**
+
+  * Post - send login information and add into database if nonexistent 
+  
+**Home Screen**
+
+  * Post - current geo location constantly
+  * Get - users’ locations in your radius	
+  * Get - current music
+  * Get - profile picture
+  
+**Profile Page**
+
+  * Put - profile picture
+  * Get - user’s name
+  * Get - description
+  * Get - # of listeners
+  * Get - # of listenTo’s
+  * Get - favorite songs
+  
+**Chat Screen**
+
+  * Get - chat log
+  * Get - current music
+  
+**Message Screen**
+
+  * Get - message log
+  * Post - message(s)
+  
+**Play Screen**
+
+  * Get - current song
+  * Get - album cover
+  * Get - name
+  * Post - in order to like a song
+  * Get - when someone likes a message
+  
+**My Music Screen**
+
+  * Get - user’s playlist
+  * Get - user’s current songs
+
+
+
