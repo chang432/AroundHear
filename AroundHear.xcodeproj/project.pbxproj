@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		12FE0E179CC4D023D6B2503D /* Pods_AroundHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0BE98EE3D8F27182919573 /* Pods_AroundHearTests.framework */; };
+		6D1EF03A224C37D800407E34 /* myMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF039224C37D800407E34 /* myMusic.storyboard */; };
+		6D1EF03C224C383600407E34 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF03B224C383600407E34 /* home.storyboard */; };
+		6D1EF03E224C388E00407E34 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF03D224C388E00407E34 /* profile.storyboard */; };
 		85676C49758388C4CD94FCA8 /* Pods_AroundHearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C464052590FACF3D30E9AFB /* Pods_AroundHearUITests.framework */; };
 		8C2BD9F7D19C735493D4E572 /* Pods_AroundHear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401B590B6624D8732D110AEB /* Pods_AroundHear.framework */; };
 		991CCA062241AFB300492DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA052241AFB300492DB2 /* AppDelegate.swift */; };
@@ -43,6 +46,9 @@
 		3C464052590FACF3D30E9AFB /* Pods_AroundHearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundHearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401B590B6624D8732D110AEB /* Pods_AroundHear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundHear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		648DCB68F006297BE3D4F356 /* Pods-AroundHear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHear.release.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHear/Pods-AroundHear.release.xcconfig"; sourceTree = "<group>"; };
+		6D1EF039224C37D800407E34 /* myMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myMusic.storyboard; sourceTree = "<group>"; };
+		6D1EF03B224C383600407E34 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
+		6D1EF03D224C388E00407E34 /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
 		8F7AEA86AA00240F6E7FA8ED /* Pods-AroundHearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearTests/Pods-AroundHearTests.release.xcconfig"; sourceTree = "<group>"; };
 		991CCA022241AFB300492DB2 /* AroundHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		991CCA052241AFB300492DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 				991CCA052241AFB300492DB2 /* AppDelegate.swift */,
 				991CCA072241AFB300492DB2 /* ViewController.swift */,
 				991CCA092241AFB300492DB2 /* Main.storyboard */,
+				6D1EF039224C37D800407E34 /* myMusic.storyboard */,
+				6D1EF03B224C383600407E34 /* home.storyboard */,
+				6D1EF03D224C388E00407E34 /* profile.storyboard */,
 				991CCA0C2241AFB400492DB2 /* Assets.xcassets */,
 				991CCA0E2241AFB400492DB2 /* LaunchScreen.storyboard */,
 				991CCA112241AFB400492DB2 /* Info.plist */,
@@ -280,9 +289,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1EF03E224C388E00407E34 /* profile.storyboard in Resources */,
 				991CCA102241AFB400492DB2 /* LaunchScreen.storyboard in Resources */,
+				6D1EF03C224C383600407E34 /* home.storyboard in Resources */,
 				991CCA342241B68F00492DB2 /* GoogleService-Info.plist in Resources */,
 				991CCA0D2241AFB400492DB2 /* Assets.xcassets in Resources */,
+				6D1EF03A224C37D800407E34 /* myMusic.storyboard in Resources */,
 				991CCA0B2241AFB300492DB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
