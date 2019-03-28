@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class LoginRegisterViewController: UIViewController {
 
     @IBOutlet weak var signInRegisterSelector: UISegmentedControl!
@@ -16,6 +17,7 @@ class LoginRegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInRegisterButton: UIButton!
+    
     
     var isSignIn: Bool = true
     
@@ -57,6 +59,11 @@ class LoginRegisterViewController: UIViewController {
                         self.performSegue(withIdentifier: "goHome", sender: self)
                     }else{
                         //Error, check error and display message
+                        let errorMessage = error?.localizedDescription
+                        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
                     }
                     
                 })
@@ -71,6 +78,10 @@ class LoginRegisterViewController: UIViewController {
                         self.performSegue(withIdentifier: "goHome", sender: self)
                     }else{
                         //an error ocured, chow message
+                        let errorMessage = error?.localizedDescription
+                        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                         
                     }
                 }
