@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+
 
 
 class LoginRegisterViewController: UIViewController {
@@ -18,14 +20,29 @@ class LoginRegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInRegisterButton: UIButton!
     
+    @IBOutlet weak var lengthIndicatorLabel: UILabel!
+    
     
     var isSignIn: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        let content = emailTextField.text
+        let first = content?.components(separatedBy: " ").first
+        if first!.count > 6 {
+            lengthIndicatorLabel.text = "ok lenght"
+        }else{
+            lengthIndicatorLabel.text = "lenght not ok"
+        }
+        //if emailTextField.text.leng
+    }
+   
     
     
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
@@ -75,7 +92,10 @@ class LoginRegisterViewController: UIViewController {
                     //check user was created successfully
                     if let u = user{
                         //correct registration -> go to home screen
+
+                        Database.database().reference().child("users").child(u.uid).setValue(["email": email])
                         self.performSegue(withIdentifier: "goHome", sender: self)
+                        
                     }else{
                         //an error ocured, chow message
                         let errorMessage = error?.localizedDescription

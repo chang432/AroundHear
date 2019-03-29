@@ -9,6 +9,7 @@ target 'AroundHear' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'FirebaseUI/Auth'
+pod 'Firebase/Database'
 pod 'Firestore', :podspec => 'https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json'
 
   target 'AroundHearTests' do
