@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homeTabIcon" width="24" height="24"/>
+        <image name="homeTabIcon" width="18" height="18"/>
     </resources>
 </document>
