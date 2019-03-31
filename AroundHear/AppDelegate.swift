@@ -13,6 +13,7 @@ import Firestore
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate {
     
+    
     var window: UIWindow?
 
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
@@ -25,7 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         print("renewed", session)
     }
     
-    let SpotifyClientID = "[your spotify client id here]"
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        self.sessionManager.application(app, open: url, options: options)
+        return true
+    }
+    
+    let SpotifyClientID = "c64fd829b4a84a44a9cf92ca16291374"
     let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
     
     lazy var configuration = SPTConfiguration(
@@ -34,11 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     )
     
     lazy var sessionManager: SPTSessionManager = {
-        if let tokenSwapURL = URL(string: "https://[my token swap app domain]/api/token"),
-            let tokenRefreshURL = URL(string: "https://[my token swap app domain]/api/refresh_token") {
+        if let tokenSwapURL = URL(string: "https://around-hear.herokuapp.com/api/token"),
+            let tokenRefreshURL = URL(string: "https://around-hear.herokuapp.com/api/refresh_token") {
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             self.configuration.playURI = ""
+            print("hi")
+            print(tokenRefreshURL)
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager
@@ -46,9 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         FirebaseApp.configure()
-        
+        //Spotify Authorization
+        let requestedScopes: SPTScope = [.appRemoteControl]
+        self.sessionManager.initiateSession(with: requestedScopes, options: .default)
+
         if Auth.auth().currentUser != nil {
             
             let main = UIStoryboard(name: "Main", bundle: nil)
