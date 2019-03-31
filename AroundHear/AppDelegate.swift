@@ -11,10 +11,38 @@ import Firebase
 import Firestore
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate {
+    
     var window: UIWindow?
 
+    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
+        print("success", session)
+    }
+    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
+        print("fail", error)
+    }
+    func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
+        print("renewed", session)
+    }
+    
+    let SpotifyClientID = "[your spotify client id here]"
+    let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
+    
+    lazy var configuration = SPTConfiguration(
+        clientID: SpotifyClientID,
+        redirectURL: SpotifyRedirectURL
+    )
+    
+    lazy var sessionManager: SPTSessionManager = {
+        if let tokenSwapURL = URL(string: "https://[my token swap app domain]/api/token"),
+            let tokenRefreshURL = URL(string: "https://[my token swap app domain]/api/refresh_token") {
+            self.configuration.tokenSwapURL = tokenSwapURL
+            self.configuration.tokenRefreshURL = tokenRefreshURL
+            self.configuration.playURI = ""
+        }
+        let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
+        return manager
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
