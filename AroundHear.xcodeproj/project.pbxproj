@@ -11,6 +11,7 @@
 		6D1EF03A224C37D800407E34 /* myMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF039224C37D800407E34 /* myMusic.storyboard */; };
 		6D1EF03C224C383600407E34 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF03B224C383600407E34 /* home.storyboard */; };
 		6D1EF03E224C388E00407E34 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1EF03D224C388E00407E34 /* profile.storyboard */; };
+		6DB28FF9225151B200FBA3EE /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB28FF8225151B200FBA3EE /* SpotifyiOS.framework */; };
 		85676C49758388C4CD94FCA8 /* Pods_AroundHearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C464052590FACF3D30E9AFB /* Pods_AroundHearUITests.framework */; };
 		8C2BD9F7D19C735493D4E572 /* Pods_AroundHear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401B590B6624D8732D110AEB /* Pods_AroundHear.framework */; };
 		991CCA062241AFB300492DB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA052241AFB300492DB2 /* AppDelegate.swift */; };
@@ -54,6 +55,8 @@
 		6D1EF039224C37D800407E34 /* myMusic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myMusic.storyboard; sourceTree = "<group>"; };
 		6D1EF03B224C383600407E34 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
 		6D1EF03D224C388E00407E34 /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
+		6DB28FF8225151B200FBA3EE /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		6DB28FFA2251532D00FBA3EE /* AroundHear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AroundHear-Bridging-Header.h"; sourceTree = "<group>"; };
 		8F7AEA86AA00240F6E7FA8ED /* Pods-AroundHearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearTests/Pods-AroundHearTests.release.xcconfig"; sourceTree = "<group>"; };
 		991CCA022241AFB300492DB2 /* AroundHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		991CCA052241AFB300492DB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2BD9F7D19C735493D4E572 /* Pods_AroundHear.framework in Frameworks */,
+				6DB28FF9225151B200FBA3EE /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +116,8 @@
 		991CC9F92241AFB300492DB2 = {
 			isa = PBXGroup;
 			children = (
+				6DB28FFA2251532D00FBA3EE /* AroundHear-Bridging-Header.h */,
+				6DB28FF8225151B200FBA3EE /* SpotifyiOS.framework */,
 				991CCA042241AFB300492DB2 /* AroundHear */,
 				991CCA192241AFB400492DB2 /* AroundHearTests */,
 				991CCA242241AFB400492DB2 /* AroundHearUITests */,
@@ -650,6 +656,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AroundHear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,6 +667,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AroundHear-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -668,6 +679,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AroundHear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -675,6 +690,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AroundHear-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
