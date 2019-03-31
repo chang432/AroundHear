@@ -20,10 +20,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.view.backgroundColor = UIColor .orange
         logInButton.layer.cornerRadius = logInButton.frame.height/2
         
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func goBackButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToWelcome", sender: self)
+    }
+    
     
     
     @IBAction func logInButtonTapped(_ sender: UIButton) {

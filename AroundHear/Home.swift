@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class Home: UIViewController {
-
+    
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+
 
     /*
     // MARK: - Navigation

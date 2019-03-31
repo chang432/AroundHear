@@ -122,7 +122,6 @@
                         <outlet property="signInRegisterButton" destination="ysh-2h-INO" id="N5d-EJ-u6t"/>
                         <outlet property="signInRegisterLabel" destination="kQ1-t7-4qu" id="Duj-ag-eAi"/>
                         <outlet property="signInRegisterSelector" destination="LPX-EW-XIg" id="OM5-Xs-HM0"/>
-                        <segue destination="pRZ-L3-nQu" kind="presentation" identifier="goHome" id="H0S-U8-MBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj1-qV-oKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +131,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Yok-qw-2F1">
             <objects>
-                <tabBarController id="pRZ-L3-nQu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="pRZ-L3-nQu" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m1g-JZ-1gr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +145,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weG-np-8KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="1085"/>
+            <point key="canvasLocation" x="2004" y="1849"/>
         </scene>
         <!--myMusic-->
         <scene sceneID="5oP-HN-tiO">
@@ -156,9 +155,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckc-Ec-zFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="2490" y="713"/>
-
+            <point key="canvasLocation" x="3061" y="1589"/>
         </scene>
         <!--home-->
         <scene sceneID="EwS-Js-acR">
@@ -168,9 +165,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Hk-Gy-gix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="2474" y="1067"/>
-
+            <point key="canvasLocation" x="3045" y="1812"/>
         </scene>
         <!--profile-->
         <scene sceneID="Dcs-id-Cwq">
@@ -180,9 +175,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOR-id-B4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="2474" y="1355"/>
-
+            <point key="canvasLocation" x="3072" y="1993"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CO4-LK-VuL">
@@ -211,7 +204,7 @@
         <!--WelcomeV Iew Controller-->
         <scene sceneID="yVl-3Z-cLR">
             <objects>
-                <viewController id="ctb-GZ-n8H" customClass="WelcomeVIewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeScreen" id="ctb-GZ-n8H" customClass="WelcomeVIewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ru-Ba-Z4u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqL-sk-XrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="2141"/>
+            <point key="canvasLocation" x="-494" y="2151"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wZR-9T-Qu1">
@@ -307,6 +300,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgO-pl-TiD">
+                                <rect key="frame" x="16" y="33" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back" image="Arrows-Back-icon">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButton:" destination="9fb-EU-APX" eventType="touchUpInside" id="mDM-qh-0eG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cIt-0S-5YS"/>
@@ -316,11 +319,12 @@
                         <outlet property="logInButton" destination="THV-P2-G4Q" id="HBG-9B-Am6"/>
                         <outlet property="passwordTextField" destination="9SV-tl-azp" id="TBh-aF-GaD"/>
                         <segue destination="pRZ-L3-nQu" kind="show" identifier="goHome" id="fJm-NM-b8W"/>
+                        <segue destination="ctb-GZ-n8H" kind="show" identifier="goToWelcome" id="afh-3t-l7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="net-6R-HmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="1779.7601199400301"/>
+            <point key="canvasLocation" x="956" y="1772"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="5AQ-nA-oAU">
@@ -380,6 +384,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGU-WC-0uq">
+                                <rect key="frame" x="16" y="33" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back" image="Arrows-Back-icon">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButton:" destination="9fb-EU-APX" eventType="touchUpInside" id="501-JE-Kfn"/>
+                                    <action selector="goBackButton:" destination="2XA-Ov-yxw" eventType="touchUpInside" id="WGj-uf-wSF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zTf-Yh-Gyg"/>
@@ -391,6 +406,7 @@
                         <outlet property="usernameTakenLabel" destination="Hip-Uj-SK5" id="zgU-qy-3z5"/>
                         <outlet property="usernameTextField" destination="GJ4-Dp-Qai" id="LA6-ta-4Th"/>
                         <segue destination="pRZ-L3-nQu" kind="show" identifier="goHome" id="Oqd-Fd-foS"/>
+                        <segue destination="ctb-GZ-n8H" kind="show" identifier="goToWelcome" id="Udi-o7-IDE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8P-fC-8pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,7 +414,11 @@
             <point key="canvasLocation" x="956" y="2497.6011994003002"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Arrows-Back-icon" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Udi-o7-IDE"/>
         <segue reference="Oqd-Fd-foS"/>
     </inferredMetricsTieBreakers>
 </document>

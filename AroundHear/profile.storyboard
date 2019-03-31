@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xch-OZ-PeO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08n-qK-5q3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--View Controller-->
         <scene sceneID="w47-Xa-8x0">
             <objects>
                 <viewController id="xch-OZ-PeO" sceneMemberID="viewController">
@@ -29,15 +29,73 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eyI-Qx-z31"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profileTabIcon" id="DH5-5V-Kvd"/>
+                    <navigationItem key="navigationItem" id="k5u-7S-tXw">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="edit" id="0lR-aD-fYD">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Opy-qd-4Iv" kind="presentation" id="yys-rV-Q5b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apk-Q3-EJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="151"/>
+            <point key="canvasLocation" x="1151.2" y="150.67466266866569"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="Tya-Fk-Cj2">
+            <objects>
+                <viewController id="Opy-qd-4Iv" customClass="EditProfileViewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hd3-BD-COz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibm-dK-pPc">
+                                <rect key="frame" x="131" y="575" width="112" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButton:" destination="Opy-qd-4Iv" eventType="touchUpInside" id="Ev3-yx-naR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GkP-QX-Le5"/>
+                    </view>
+                    <connections>
+                        <outlet property="signOutButton" destination="Ibm-dK-pPc" id="Iwh-Pc-G4l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHH-YJ-afS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="150.67466266866569"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Ldg-yu-IY5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="08n-qK-5q3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profileTabIcon" id="DH5-5V-Kvd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I6A-81-Bsl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xch-OZ-PeO" kind="relationship" relationship="rootViewController" id="hbh-vt-LIJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7w0-qy-7iA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="150.67466266866569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="profileTabIcon" width="24" height="24"/>
+        <image name="profileTabIcon" width="18" height="18"/>
     </resources>
 </document>

@@ -21,6 +21,7 @@
 		991CCA1B2241AFB400492DB2 /* AroundHearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA1A2241AFB400492DB2 /* AroundHearTests.swift */; };
 		991CCA262241AFB400492DB2 /* AroundHearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA252241AFB400492DB2 /* AroundHearUITests.swift */; };
 		991CCA342241B68F00492DB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991CCA332241B68F00492DB2 /* GoogleService-Info.plist */; };
+		99866AE9225009500010A10A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99866AE8225009500010A10A /* EditProfileViewController.swift */; };
 		999BAE1D224DD6EA000F4C3E /* WelcomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */; };
 		999BAE1F224DD712000F4C3E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE1E224DD712000F4C3E /* LoginViewController.swift */; };
 		999BAE21224DD73C000F4C3E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE20224DD73C000F4C3E /* RegisterViewController.swift */; };
@@ -68,6 +69,7 @@
 		991CCA252241AFB400492DB2 /* AroundHearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundHearUITests.swift; sourceTree = "<group>"; };
 		991CCA272241AFB400492DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991CCA332241B68F00492DB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99866AE8225009500010A10A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVIewController.swift; sourceTree = "<group>"; };
 		999BAE1E224DD712000F4C3E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		999BAE20224DD73C000F4C3E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */,
 				999BAE1E224DD712000F4C3E /* LoginViewController.swift */,
 				999BAE20224DD73C000F4C3E /* RegisterViewController.swift */,
+				99866AE8225009500010A10A /* EditProfileViewController.swift */,
 			);
 			path = AroundHear;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99866AE9225009500010A10A /* EditProfileViewController.swift in Sources */,
 				999BAE1F224DD712000F4C3E /* LoginViewController.swift in Sources */,
 				99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */,
 				999BAE21224DD73C000F4C3E /* RegisterViewController.swift in Sources */,

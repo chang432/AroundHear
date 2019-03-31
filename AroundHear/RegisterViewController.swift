@@ -24,10 +24,17 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.view.backgroundColor = UIColor .orange
         signUpButton.layer.cornerRadius = signUpButton.frame.height/2
         usernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func goBackButton(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "goToWelcome", sender: self)
     }
     
     
@@ -65,7 +72,7 @@ class RegisterViewController: UIViewController {
                 
             } else{
                 self.usernameistaken = false
-                self.usernameTakenLabel.text = "This username available"
+                self.usernameTakenLabel.text = "This username is available"
                 self.usernameTakenLabel.textColor = UIColor .green
             }
         }

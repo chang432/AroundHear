@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        if Auth.auth().currentUser != nil {
+            
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavegationController = main.instantiateViewController(withIdentifier: "HomeTabBarController")
+            window?.rootViewController = feedNavegationController
+            
+        }
 //        let db = Firestore.firestore()
 //
 //        db.collection("cities").document("LA").setData([

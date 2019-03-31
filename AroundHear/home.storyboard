@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="uev-x2-FWq">
             <objects>
-                <viewController id="sbv-JC-y6m" sceneMemberID="viewController">
+                <viewController id="sbv-JC-y6m" customClass="Home" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LWC-ga-cQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeTabIcon" id="mXc-cb-RCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="cQt-Rt-pHK" id="0MX-fO-KhM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wr-Xe-INM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
