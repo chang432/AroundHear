@@ -6,6 +6,14 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 
+
+## Sprint 1
+Sign Up & Sign Out                                            |IPhone 8       |   IPhone SE Landscape         
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+<img src="http://g.recordit.co/nrAeEm7utZ.gif" width=250><br> | <img src="http://g.recordit.co/0ossyFnt1i.gif" width=250><br> | <img src="http://g.recordit.co/8fuQQrtg8n.gif" width=250><br> 
+
+
+
 ## Overview
 ### Description
 A music social media app that lets users listen to what other users are currently listening to based on proximity.
