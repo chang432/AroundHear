@@ -45,12 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             self.configuration.playURI = ""
-            print("hi")
             print(tokenRefreshURL)
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager
     }()
+    
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -66,20 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             window?.rootViewController = feedNavegationController
             
         }
-//        let db = Firestore.firestore()
-//
-//        db.collection("cities").document("LA").setData([
-//            "name": "Los Angeles",
-//            "state": "CA",
-//            "country": "USA"
-//        ]) { (error: Error?) in
-//            if let error = error{
-//                print("\(error.localizedDescription)")
-//            }else{
-//                print("Success")
-//            }
-//        }
-//
+
         return true
     }
 
