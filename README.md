@@ -10,7 +10,7 @@
 ## Sprint 2
 Get user location from GPS                                    |Sign In       |   Spotify API         
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/44ZAyoDW9H.gif" width=300><br> | <img src="http://g.recordit.co/XwGI83krFB.gif" width=250><br> | <img src="https://i.imgur.com/c4hun8Z.gif" width=250><br> 
+<img src="http://g.recordit.co/44ZAyoDW9H.gif" width=300><br> | <img src="" width=250><br> | <img src="" width=250><br> 
 
 
 
