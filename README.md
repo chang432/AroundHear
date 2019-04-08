@@ -70,7 +70,7 @@ A music social media app that lets users listen to what other users are currentl
 * Be able to view your spotify lists and search for songs on spotify
 * Be able to send a like to a user currently playing music in the radius
 * Be able to receive a notification of a like from another user while you are playing music
-* Be able to edit and view your own profile
+- [x] Be able to edit and view your own profile
 
 **Optional Nice-to-have Stories**
 
