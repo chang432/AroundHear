@@ -6,6 +6,21 @@
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 
+
+## Sprint 2
+Get user location from GPS                                    |Sign In       |   Spotify API         
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+<img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="" width=250><br> 
+
+
+
+## Sprint 1
+Sign Up & Sign Out                                            |Sign In       |   Spotify API         
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+<img src="http://g.recordit.co/nrAeEm7utZ.gif" width=250><br> | <img src="http://g.recordit.co/XwGI83krFB.gif" width=250><br> | <img src="https://i.imgur.com/c4hun8Z.gif" width=250><br> 
+
+
+
 ## Overview
 ### Description
 A music social media app that lets users listen to what other users are currently listening to based on proximity.
@@ -43,12 +58,14 @@ A music social media app that lets users listen to what other users are currentl
 
 **Required Must-have Stories**
 
-* Be able to login with spotify api
-* Be able to see yourself and the general location of other users on a map
+- [x] Be able to login with spotify api
+- [x] Get users location from GPS and update it on realtime database
+* Be able to see list of users in your radious
 * Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile
 * Be able to chat with users in your radius
 * Be able to see the song title of what other users are listening to in your radius
-* Be able to logout
+- [x] Be able to logout
+- [x] be able to sign in or sign up
 * Be able to play/broadcast your music in real time to other users in the set radius
 * Be able to view your spotify lists and search for songs on spotify
 * Be able to send a like to a user currently playing music in the radius
