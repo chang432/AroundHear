@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Firestore
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate {
@@ -57,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         FirebaseApp.configure()
         //Spotify Authorization
         let requestedScopes: SPTScope = [.appRemoteControl]
+        
         self.sessionManager.initiateSession(with: requestedScopes, options: .default)
 
         if Auth.auth().currentUser != nil {
@@ -66,20 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             window?.rootViewController = feedNavegationController
             
         }
-//        let db = Firestore.firestore()
-//
-//        db.collection("cities").document("LA").setData([
-//            "name": "Los Angeles",
-//            "state": "CA",
-//            "country": "USA"
-//        ]) { (error: Error?) in
-//            if let error = error{
-//                print("\(error.localizedDescription)")
-//            }else{
-//                print("Success")
-//            }
-//        }
-//
+
         return true
     }
 

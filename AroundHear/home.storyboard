@@ -18,21 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQt-Rt-pHK">
-                                <rect key="frame" x="87" y="283" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-eL-uoR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sbv-JC-y6m" id="oeB-Ii-mHk"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sdg-eL-uoR" firstAttribute="leading" secondItem="gs4-UF-mLa" secondAttribute="leading" id="Egk-bN-Rnl"/>
+                            <constraint firstItem="gs4-UF-mLa" firstAttribute="trailing" secondItem="Sdg-eL-uoR" secondAttribute="trailing" id="aHl-Of-gMi"/>
+                            <constraint firstItem="Sdg-eL-uoR" firstAttribute="top" secondItem="LWC-ga-cQ2" secondAttribute="topMargin" id="mSR-7R-vmb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Sdg-eL-uoR" secondAttribute="bottom" id="t63-XO-2do"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gs4-UF-mLa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeTabIcon" id="mXc-cb-RCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="welcomeLabel" destination="cQt-Rt-pHK" id="0MX-fO-KhM"/>
+                        <outlet property="mapView" destination="Sdg-eL-uoR" id="MXa-Wy-Atg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wr-Xe-INM" userLabel="First Responder" sceneMemberID="firstResponder"/>

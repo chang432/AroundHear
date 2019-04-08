@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 import FirebaseDatabase
 
 
@@ -93,7 +94,7 @@ class LoginRegisterViewController: UIViewController {
                     if let u = user{
                         //correct registration -> go to home screen
 
-                        Database.database().reference().child("users").child(u.uid).setValue(["email": email])
+                        Database.database().reference().child("users").child(u.user.uid).setValue(["email": email])
                         self.performSegue(withIdentifier: "goHome", sender: self)
                         
                     }else{
