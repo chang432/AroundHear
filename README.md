@@ -9,9 +9,8 @@
 
 
 ## Sprint 2
-Update user location                                          |Sign In       |   Spotify API         
-:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/44ZAyoDW9H.gif" width=1000><br> | <img src="http://g.recordit.co/XwGI83krFB.gif" width=250><br> | <img src="https://i.imgur.com/c4hun8Z.gif" width=250><br> 
+Update user location                                          
+<img src="http://g.recordit.co/44ZAyoDW9H.gif" width=1000><br> 
 
 ## Sprint 1
 Sign Up & Sign Out                                            |Sign In       |   Spotify API         
