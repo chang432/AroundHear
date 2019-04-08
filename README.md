@@ -59,6 +59,7 @@ A music social media app that lets users listen to what other users are currentl
 **Required Must-have Stories**
 
 - [x] Be able to login with spotify api
+- [x] Get users location from GPS and update it on realtime database
 * Be able to see yourself and the general location of other users on a map
 * Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile
 * Be able to chat with users in your radius
