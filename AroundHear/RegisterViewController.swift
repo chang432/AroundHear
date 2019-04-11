@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
                 //check user was created successfully
                 if let u = user{
                     //correct registration -> go to home screen
-                    Database.database().reference().child("users").child(u.uid).setValue(["email": email, "username": username])
+                    Database.database().reference().child("users").child(u.user.uid).setValue(["email": email, "username": username])
                     self.performSegue(withIdentifier: "goHome", sender: self)
                     
                 }else{

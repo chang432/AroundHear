@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Firestore
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate {
@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         FirebaseApp.configure()
         //Spotify Authorization
         let requestedScopes: SPTScope = [.appRemoteControl]
+        
         self.sessionManager.initiateSession(with: requestedScopes, options: .default)
 
         if Auth.auth().currentUser != nil {
