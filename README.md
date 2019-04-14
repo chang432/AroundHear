@@ -10,7 +10,7 @@
 ## Sprint 2
 Get user location from GPS                                    |Edit and view profile       |   Spotify API         
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="" width=250><br> 
+<img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="https://i.imgur.com/N46w2yC.jpg" width=250><br> 
 
 
 
