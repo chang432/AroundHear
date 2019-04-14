@@ -21,12 +21,14 @@
 		991CCA1B2241AFB400492DB2 /* AroundHearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA1A2241AFB400492DB2 /* AroundHearTests.swift */; };
 		991CCA262241AFB400492DB2 /* AroundHearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA252241AFB400492DB2 /* AroundHearUITests.swift */; };
 		991CCA342241B68F00492DB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991CCA332241B68F00492DB2 /* GoogleService-Info.plist */; };
+		998532722262871100C7A7B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998532712262871100C7A7B8 /* User.swift */; };
 		99866AE9225009500010A10A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99866AE8225009500010A10A /* EditProfileViewController.swift */; };
 		999BAE1D224DD6EA000F4C3E /* WelcomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */; };
 		999BAE1F224DD712000F4C3E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE1E224DD712000F4C3E /* LoginViewController.swift */; };
 		999BAE21224DD73C000F4C3E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE20224DD73C000F4C3E /* RegisterViewController.swift */; };
 		999C78A2224D79CA009935C5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999C78A1224D79CA009935C5 /* Home.swift */; };
 		99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */; };
+		99EE2136225FA89E00546E81 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE2135225FA89E00546E81 /* UsersCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +72,14 @@
 		991CCA252241AFB400492DB2 /* AroundHearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundHearUITests.swift; sourceTree = "<group>"; };
 		991CCA272241AFB400492DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991CCA332241B68F00492DB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		998532712262871100C7A7B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99866AE8225009500010A10A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVIewController.swift; sourceTree = "<group>"; };
 		999BAE1E224DD712000F4C3E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		999BAE20224DD73C000F4C3E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		999C78A1224D79CA009935C5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
+		99EE2135225FA89E00546E81 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		AAADEC5C1600EB8BC078BBFE /* Pods-AroundHearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearUITests/Pods-AroundHearUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C487993BE988B522412F6F /* Pods-AroundHear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHear/Pods-AroundHear.debug.xcconfig"; sourceTree = "<group>"; };
 		DD180A9E515F3BA4DA2D1418 /* Pods-AroundHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundHearUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AroundHearUITests/Pods-AroundHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				999BAE1E224DD712000F4C3E /* LoginViewController.swift */,
 				999BAE20224DD73C000F4C3E /* RegisterViewController.swift */,
 				99866AE8225009500010A10A /* EditProfileViewController.swift */,
+				99EE2135225FA89E00546E81 /* UsersCell.swift */,
+				998532712262871100C7A7B8 /* User.swift */,
 			);
 			path = AroundHear;
 			sourceTree = "<group>";
@@ -458,6 +464,8 @@
 				999BAE1F224DD712000F4C3E /* LoginViewController.swift in Sources */,
 				99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */,
 				999BAE21224DD73C000F4C3E /* RegisterViewController.swift in Sources */,
+				99EE2136225FA89E00546E81 /* UsersCell.swift in Sources */,
+				998532722262871100C7A7B8 /* User.swift in Sources */,
 				999C78A2224D79CA009935C5 /* Home.swift in Sources */,
 				991CCA062241AFB300492DB2 /* AppDelegate.swift in Sources */,
 				999BAE1D224DD6EA000F4C3E /* WelcomeVIewController.swift in Sources */,

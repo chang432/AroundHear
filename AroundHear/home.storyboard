@@ -18,31 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-eL-uoR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <connections>
-                                    <outlet property="delegate" destination="sbv-JC-y6m" id="oeB-Ii-mHk"/>
-                                </connections>
-                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZwZ-hF-ATB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UsersCell" rowHeight="84" id="iGQ-de-Rbf" customClass="UsersCell" customModule="AroundHear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iGQ-de-Rbf" id="cAd-37-HKb" customClass="UsersCell" customModule="AroundHear" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXR-lM-Pe0">
+                                                    <rect key="frame" x="15" y="11" width="345" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQc-pf-5Nr" userLabel="Distance Label">
+                                                    <rect key="frame" x="15" y="52" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="RQc-pf-5Nr" id="vGh-yJ-UBm"/>
+                                            <outlet property="nameLabel" destination="zXR-lM-Pe0" id="zQb-tl-bQ8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Sdg-eL-uoR" firstAttribute="leading" secondItem="gs4-UF-mLa" secondAttribute="leading" id="Egk-bN-Rnl"/>
-                            <constraint firstItem="gs4-UF-mLa" firstAttribute="trailing" secondItem="Sdg-eL-uoR" secondAttribute="trailing" id="aHl-Of-gMi"/>
-                            <constraint firstItem="Sdg-eL-uoR" firstAttribute="top" secondItem="LWC-ga-cQ2" secondAttribute="topMargin" id="mSR-7R-vmb"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Sdg-eL-uoR" secondAttribute="bottom" id="t63-XO-2do"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gs4-UF-mLa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeTabIcon" id="mXc-cb-RCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="Sdg-eL-uoR" id="MXa-Wy-Atg"/>
+                        <outlet property="tableView" destination="ZwZ-hF-ATB" id="73P-oN-XdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wr-Xe-INM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="128"/>
+            <point key="canvasLocation" x="-127.2" y="137.18140929535232"/>
         </scene>
     </scenes>
     <resources>

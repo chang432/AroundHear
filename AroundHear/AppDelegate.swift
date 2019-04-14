@@ -56,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
         // Override point for customization after application launch.
         FirebaseApp.configure()
         //Spotify Authorization
-        let requestedScopes: SPTScope = [.appRemoteControl]
-        
-        self.sessionManager.initiateSession(with: requestedScopes, options: .default)
+//        let requestedScopes: SPTScope = [.appRemoteControl]
+//        
+//        self.sessionManager.initiateSession(with: requestedScopes, options: .default)
 
         if Auth.auth().currentUser != nil {
             
