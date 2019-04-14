@@ -45,12 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             self.configuration.tokenSwapURL = tokenSwapURL
             self.configuration.tokenRefreshURL = tokenRefreshURL
             self.configuration.playURI = ""
-            print("hi")
             print(tokenRefreshURL)
         }
         let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
         return manager
     }()
+    
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

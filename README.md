@@ -8,14 +8,14 @@
 
 
 ## Sprint 2
-Get user location from GPS                                    |Sign In       |   Spotify API         
+Get user location from GPS                                    |Edit and view profile       |   Spotify API         
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="" width=250><br> 
+<img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="https://i.imgur.com/N46w2yC.jpg" width=250><br> 
 
 
 
 ## Sprint 1
-Sign Up & Sign Out                                            |Sign In       |   Spotify API         
+Sign Up & Sign Out                                            |Sign In       |Spotify API         
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 <img src="http://g.recordit.co/nrAeEm7utZ.gif" width=250><br> | <img src="http://g.recordit.co/XwGI83krFB.gif" width=250><br> | <img src="https://i.imgur.com/c4hun8Z.gif" width=250><br> 
 
@@ -68,9 +68,10 @@ A music social media app that lets users listen to what other users are currentl
 - [x] be able to sign in or sign up
 * Be able to play/broadcast your music in real time to other users in the set radius
 * Be able to view your spotify lists and search for songs on spotify
+- [x] Be able to listen to music from spotify
 * Be able to send a like to a user currently playing music in the radius
 * Be able to receive a notification of a like from another user while you are playing music
-* Be able to edit and view your own profile
+- [x] Be able to edit and view your own profile
 
 **Optional Nice-to-have Stories**
 
