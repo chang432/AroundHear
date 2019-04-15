@@ -7,10 +7,10 @@
 1. [Wireframes](#Wireframes)
 
 
-## Sprint 2
-See list of users in your radious                             |Edit and view profile       |Spotify API         
+## Sprint 3
+See list of users in your radious                             |User Story here       |User Story here      
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="https://i.imgur.com/N46w2yC.jpg" width=250><br> 
+<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="" width=250><br> | <img src="" width=250><br> 
 
 
 
