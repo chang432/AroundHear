@@ -19,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
 
+        //Spotify Authorization
+//        let requestedScopes: SPTScope = [.appRemoteControl]
+//        
+//        self.sessionManager.initiateSession(with: requestedScopes, options: .default)
+
+        if Auth.auth().currentUser != nil {
+            
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavegationController = main.instantiateViewController(withIdentifier: "HomeTabBarController")
+            window?.rootViewController = feedNavegationController
+            
+        }
+
         auth.redirectURL = URL(string: "Around-Hear://returnAfterLogin") // insert your redirect URL here
         auth.sessionUserDefaultsKey = "current session"
         
