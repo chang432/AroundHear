@@ -8,7 +8,14 @@
 
 
 ## Sprint 2
-Get user location from GPS                                    |Edit and view profile       |   Spotify API         
+See list of users in your radious                             |Edit and view profile       |Spotify API         
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="https://i.imgur.com/N46w2yC.jpg" width=250><br> 
+
+
+
+## Sprint 2
+Get user location from GPS                                    |Edit and view profile       |Spotify API         
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 <img src="http://g.recordit.co/80NKwhAlQG.gif" width=250><br> | <img src="https://i.imgur.com/lcgaunk.gif" width=250><br> | <img src="https://i.imgur.com/N46w2yC.jpg" width=250><br> 
 
@@ -60,7 +67,7 @@ A music social media app that lets users listen to what other users are currentl
 
 - [x] Be able to login with spotify api
 - [x] Get users location from GPS and update it on realtime database
-* Be able to see list of users in your radious
+- [x] Be able to see list of users in your radious
 * Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile
 * Be able to chat with users in your radius
 * Be able to see the song title of what other users are listening to in your radius
