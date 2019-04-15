@@ -10,7 +10,7 @@
 ## Sprint 3
 See list of users in your radious                             |Spotify Playlist       |User Story here      
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="" width=250><br> 
+<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="https://i.imgur.com/EtNyQbw.png" width=250><br> 
 
 
 
