@@ -39,8 +39,6 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
         self.performSegue(withIdentifier: "goToWelcome", sender: self)
     }
     
-    
-    
     @IBAction func logInButtonTapped(_ sender: UIButton) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -91,7 +89,7 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
             self.player!.login(withAccessToken: authSession.accessToken)
         }
     }
-    
+
     @objc func updateAfterFirstLogin () {
         let userDefaults = UserDefaults.standard
         if let sessionObj:AnyObject = userDefaults.object(forKey: "SpotifySession") as AnyObject? {
@@ -113,10 +111,10 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
             // Method 1 : To get current user's playlist
             SPTPlaylistList.playlists(forUser: session.canonicalUsername, withAccessToken: session.accessToken, callback: { (error, response) in
                 if let listPage = response as? SPTPlaylistList, let playlists = listPage.items as? [SPTPartialPlaylist] {
-                    print(playlists)   // or however you want to parse these
+                    //print(playlists)   // or however you want to parse these
                     //  self.myplaylists = playlists
-                    self.myplaylists.append(contentsOf: playlists)
-                    print(self.myplaylists)
+                    //self.myplaylists.append(contentsOf: playlists)
+                    //print(self.myplaylists)
                 }
             })
             
@@ -147,11 +145,11 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
         }
         
         //Plays a song
-        /*self.player?.playSpotifyURI("spotify:track:63bAGRSSX2V1hhPSP2NpBC", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+        self.player?.playSpotifyURI("spotify:track:63bAGRSSX2V1hhPSP2NpBC", startingWith: 0, startingWithPosition: 0, callback: { (error) in
             if (error != nil) {
                 print("playing!")
             }
-        })*/
+        })
     }
     
     /*

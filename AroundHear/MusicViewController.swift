@@ -15,7 +15,9 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var session:SPTSession!
     var player: SPTAudioStreamingController?
     var loginUrl: URL?
+    
     var myplaylists = [SPTPartialPlaylist]()
+    var playlistIndex = 0
     
     @IBOutlet var playlistTableView: UITableView!
     
@@ -34,7 +36,22 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         SPTPlaylistList.playlists(forUser: AuthService.instance.sessionuserId, withAccessToken: AuthService.instance.sessiontokenId, callback: { (error, response) in
             if let listPage = response as? SPTPlaylistList, let playlists = listPage.items as? [SPTPartialPlaylist] {
-                print(playlists)   // or however you want to parse these
+                //print(playlists)   // or however you want to parse these
+                //playlists[0].playableUri
+                
+                print("tokenId: \(AuthService.instance.tokenId)")
+                print("sessiontokenId: \(AuthService.instance.sessiontokenId)")
+                print("sessionuserId: \(AuthService.instance.sessionuserId)")
+                
+                var playlist_str = playlists[0].playableUri.absoluteString
+                let beg_index = playlist_str.lastIndex(of: ":")
+                let range = beg_index! ..< playlist_str.endIndex
+                var real_playlist_str = playlist_str[range]
+                real_playlist_str.remove(at: real_playlist_str.startIndex)
+                
+                print("$$$$ \(real_playlist_str)")
+                
+                self.callAlamofire(url: "https://api.spotify.com/v1/playlists/\(real_playlist_str)/tracks")
                 
                 self.myplaylists.append(contentsOf: playlists)
                 print("LENGTH!!!!!!: \(self.myplaylists.count)")
@@ -54,21 +71,25 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
                           "grant_type" : "client_credentials"]
         Alamofire.request("https://accounts.spotify.com/api/token", method: .post, parameters: parameters).responseJSON(completionHandler: {
             response in
-            print(response)
-            print(response.result)
-            print(response.result.value)
+            //print(response)
+            //print(response.result.value)
             if let result = response.result.value {
                 let jsonData = result as! NSDictionary
+                //print("RESPONSE: ", jsonData)
                 AuthService.instance.tokenId = jsonData.value(forKey: "access_token") as? String
-                print(AuthService.instance.tokenId!)
+                //print(AuthService.instance.tokenId!)
             }
         })
     }
     
-    func callAlamofire(url: String){
-        Alamofire.request(url).responseJSON(completionHandler: {
+    func callAlamofire(url: String) {
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(AuthService.instance.tokenId!)",
+            "Accept": "application/json"
+        ]
+        Alamofire.request(url, headers: headers).responseJSON(completionHandler: {
             response in
-            
+            //print("CALL RESPONSE: \(response.data!)")
             self.parseData(JSONData: response.data!)
         })
     }
@@ -76,7 +97,7 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func parseData(JSONData : Data) {
         do {
             var readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
-            print("RESPONSE: \(readableJSON)")
+            //print("RESPONSE: \(readableJSON)")
         }
         catch {
             print(error)
@@ -102,14 +123,22 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 90;//Choose your custom row height
     }
     
-    /*
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playlistIndex = indexPath.row
+        performSegue(withIdentifier: "playlistTracksIdentifier", sender: self)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "playlistTracksIdentifier") {
+            let vc = segue.destination as? PlaylistTracksViewController
+            vc?.playlist = myplaylists[playlistIndex]
+        }
     }
-    */
+ 
 
 }
