@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="2004" y="1849"/>
         </scene>
-        <!--myMusic-->
+        <!--Music-->
         <scene sceneID="5oP-HN-tiO">
             <objects>
-                <viewControllerPlaceholder storyboardName="myMusic" id="Svk-MZ-N4o" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Music" id="Svk-MZ-N4o" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PTQ-wV-usE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckc-Ec-zFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,7 +418,7 @@
         <image name="Arrows-Back-icon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Udi-o7-IDE"/>
-        <segue reference="Oqd-Fd-foS"/>
+        <segue reference="afh-3t-l7s"/>
+        <segue reference="fJm-NM-b8W"/>
     </inferredMetricsTieBreakers>
 </document>

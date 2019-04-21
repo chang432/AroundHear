@@ -9,53 +9,16 @@
 import UIKit
 import Firebase
 
-
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate {
-    
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
-    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
-        print("success", session)
-    }
-    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-        print("fail", error)
-    }
-    func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
-        print("renewed", session)
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        self.sessionManager.application(app, open: url, options: options)
-        return true
-    }
-    
-    let SpotifyClientID = "c64fd829b4a84a44a9cf92ca16291374"
-    let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
-    
-    lazy var configuration = SPTConfiguration(
-        clientID: SpotifyClientID,
-        redirectURL: SpotifyRedirectURL
-    )
-    
-    lazy var sessionManager: SPTSessionManager = {
-        if let tokenSwapURL = URL(string: "https://around-hear.herokuapp.com/api/token"),
-            let tokenRefreshURL = URL(string: "https://around-hear.herokuapp.com/api/refresh_token") {
-            self.configuration.tokenSwapURL = tokenSwapURL
-            self.configuration.tokenRefreshURL = tokenRefreshURL
-            self.configuration.playURI = ""
-            print(tokenRefreshURL)
-        }
-        let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
-        return manager
-    }()
-    
-
+    var auth = SPTAuth()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
         //Spotify Authorization
 //        let requestedScopes: SPTScope = [.appRemoteControl]
 //        
@@ -69,12 +32,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
             
         }
 
+        auth.redirectURL = URL(string: "Around-Hear://returnAfterLogin") // insert your redirect URL here
+        auth.sessionUserDefaultsKey = "current session"
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        // called when user signs into spotify. Session data saved into user defaults, then notification posted to call updateAfterFirstLogin in ViewController.swift. Modeled off recommneded auth flow suggested by Spotify documentation
+        
+        if auth.canHandle(auth.redirectURL) {
+            auth.handleAuthCallback(withTriggeredAuthURL: url, callback: { (error, session) in
+                
+                
+                if error != nil {
+                    print("error!")
+                }
+                let userDefaults = UserDefaults.standard
+                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
+                print(sessionData)
+                userDefaults.set(sessionData, forKey: "SpotifySession")
+                userDefaults.synchronize()
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
+            })
+            return true
+        }
+        
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

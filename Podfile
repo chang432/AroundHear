@@ -18,6 +18,8 @@ pod 'Firebase/Database'
 #pod 'Firestore', :podspec => 'https://storage.googleapis.com/firebase-preview-drop/ios/firestore/0.7.0/Firestore.podspec.json'
 pod 'Geofirestore'
 
+pod 'Alamofire', '~> 4.2.0'
+
 pod 'GoogleAppMeasurement', '~> 5.3.0'
 use_frameworks!
 
