@@ -145,11 +145,54 @@
                     </view>
                     <connections>
                         <outlet property="tracksTableView" destination="JAX-1F-dRP" id="Ghx-IM-5DS"/>
+                        <segue destination="fef-3W-zhl" kind="show" identifier="SongIdentifier" id="N63-9m-pgS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hf-o1-eqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197.5999999999999" y="241.52923538230885"/>
+        </scene>
+        <!--Song-->
+        <scene sceneID="1bV-mI-zqs">
+            <objects>
+                <viewController title="Song" id="fef-3W-zhl" customClass="SongViewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oyr-Jy-pY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6R9-AG-hB9" userLabel="SongImage">
+                                <rect key="frame" x="67" y="102" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nO-tH-thZ" userLabel="SongTitle">
+                                <rect key="frame" x="67" y="361" width="240" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR9-7z-L4W" userLabel="PlayPauseBtn">
+                                <rect key="frame" x="139" y="531" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Play/Pause"/>
+                                <connections>
+                                    <action selector="playPause:" destination="fef-3W-zhl" eventType="touchUpInside" id="3jV-rJ-ejE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ke1-kA-Eyv"/>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseBtn" destination="NR9-7z-L4W" id="3aO-oX-biz"/>
+                        <outlet property="songImage" destination="6R9-AG-hB9" id="JHO-Ur-VpP"/>
+                        <outlet property="songTitle" destination="1nO-tH-thZ" id="cwB-xJ-qsu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYe-0G-B8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.5999999999999" y="241.52923538230885"/>
         </scene>
     </scenes>
     <resources>

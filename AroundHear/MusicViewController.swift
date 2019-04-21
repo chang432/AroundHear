@@ -31,7 +31,7 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         callToken()
         
-        let defaultURL = "https://api.spotify.com/v1/search?q=Linkin+Park&type=track&limit=5&access_token=\(AuthService.instance.tokenId ?? "")"
+        //let defaultURL = "https://api.spotify.com/v1/search?q=Linkin+Park&type=track&limit=5&access_token=\(AuthService.instance.tokenId ?? "")"
         //callAlamofire(url: defaultURL)
         
         SPTPlaylistList.playlists(forUser: AuthService.instance.sessionuserId, withAccessToken: AuthService.instance.sessiontokenId, callback: { (error, response) in
@@ -114,7 +114,11 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var plist = self.myplaylists[indexPath.row]
         cell!.playlistName.text = plist.name
         cell!.tracknum.text = String(plist.trackCount)
-        //cell!.playlistPic.image = UIImage(data: plist.largestImage)
+        
+        let first_image = plist.smallestImage.imageURL
+        let mainImageData = NSData(contentsOf: plist.smallestImage.imageURL!)
+        let mainImage = UIImage(data: mainImageData as! Data)
+        cell!.playlistPic.image = mainImage
         
         return cell!
     }
@@ -139,6 +143,4 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
             vc?.playlist = myplaylists[playlistIndex]
         }
     }
- 
-
 }
