@@ -32,6 +32,9 @@
 		991CCA1B2241AFB400492DB2 /* AroundHearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA1A2241AFB400492DB2 /* AroundHearTests.swift */; };
 		991CCA262241AFB400492DB2 /* AroundHearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991CCA252241AFB400492DB2 /* AroundHearUITests.swift */; };
 		991CCA342241B68F00492DB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991CCA332241B68F00492DB2 /* GoogleService-Info.plist */; };
+		991E81C9226D29EC000ABF38 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991E81C8226D29EC000ABF38 /* Message.swift */; };
+		995712C5226CB72900485825 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995712C4226CB72900485825 /* UserDetailsViewController.swift */; };
+		995712C7226CDCA600485825 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995712C6226CDCA600485825 /* ChatScreenViewController.swift */; };
 		998532722262871100C7A7B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998532712262871100C7A7B8 /* User.swift */; };
 		99866AE9225009500010A10A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99866AE8225009500010A10A /* EditProfileViewController.swift */; };
 		999BAE1D224DD6EA000F4C3E /* WelcomeVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */; };
@@ -94,6 +97,9 @@
 		991CCA252241AFB400492DB2 /* AroundHearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundHearUITests.swift; sourceTree = "<group>"; };
 		991CCA272241AFB400492DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991CCA332241B68F00492DB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		991E81C8226D29EC000ABF38 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		995712C4226CB72900485825 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		995712C6226CDCA600485825 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
 		998532712262871100C7A7B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99866AE8225009500010A10A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVIewController.swift; sourceTree = "<group>"; };
@@ -199,6 +205,10 @@
 				998532712262871100C7A7B8 /* User.swift */,
 				6DEAA4F6225FDD6F0003EA8D /* ProfileViewController.swift */,
 				6DEAA4F8225FF6C60003EA8D /* UIView+Extension.swift */,
+				995712C4226CB72900485825 /* UserDetailsViewController.swift */,
+				995712C6226CDCA600485825 /* ChatScreenViewController.swift */,
+				991E81C8226D29EC000ABF38 /* Message.swift */,
+
 			);
 			path = AroundHear;
 			sourceTree = "<group>";
@@ -507,12 +517,14 @@
 			files = (
 				99866AE9225009500010A10A /* EditProfileViewController.swift in Sources */,
 				999BAE1F224DD712000F4C3E /* LoginViewController.swift in Sources */,
+				995712C5226CB72900485825 /* UserDetailsViewController.swift in Sources */,
 				99A7C5A22249C17D0038B413 /* LoginRegisterViewController.swift in Sources */,
 				6DEAA4F9225FF6C60003EA8D /* UIView+Extension.swift in Sources */,
 				999BAE21224DD73C000F4C3E /* RegisterViewController.swift in Sources */,
 				6D7817AA2263CD3A0053C60B /* AuthService.swift in Sources */,
 				99EE2136225FA89E00546E81 /* UsersCell.swift in Sources */,
 				998532722262871100C7A7B8 /* User.swift in Sources */,
+				995712C7226CDCA600485825 /* ChatScreenViewController.swift in Sources */,
 				999C78A2224D79CA009935C5 /* Home.swift in Sources */,
 				6D5DBB482263C2EF00A0F162 /* MusicViewController.swift in Sources */,
 				6D7817AF2263D8240053C60B /* playlistTableViewCell.swift in Sources */,
@@ -523,6 +535,7 @@
 				6D7817B5226B91340053C60B /* SongViewController.swift in Sources */,
 				6D7817B1226983690053C60B /* PlaylistTracksViewController.swift in Sources */,
 				999BAE1D224DD6EA000F4C3E /* WelcomeVIewController.swift in Sources */,
+				991E81C9226D29EC000ABF38 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
