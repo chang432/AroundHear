@@ -13,8 +13,9 @@ class UsersCell: UITableViewCell {
     
     @IBOutlet weak var distanceLabel: UILabel!
     
-    @IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var nameButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +27,5 @@ class UsersCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

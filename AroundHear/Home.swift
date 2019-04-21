@@ -39,10 +39,14 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var keys: NSMutableDictionary = NSMutableDictionary()
     var userDistances: Array<User> = Array<User>()
     
+    @IBOutlet weak var nameButton: UIButton!
+    
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -50,10 +54,11 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         usersref = db.collection("users")
         geoFirestore = GeoFirestore(collectionRef: self.usersref)
         ref = Database.database().reference()
-
+        
         
         checkLocationServices()
     }
+
     
     func centerUserInMap() {
         if let location = locationManager.location?.coordinate{
@@ -98,15 +103,31 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let button = sender as! UIButton
+        
+        //let indexPath = tableView.indexPath(for: cell)!
+        //Pass the selected movie to the details view controller
+        let name = button.titleLabel?.text
+        var key: String!
+        for item in userDistances{
+            if item.name == name{
+                key = item.key
+            }
+        }
+        let detailsViewController = segue.destination as! UserDetailsViewController
+        detailsViewController.nameBar.title = name
+        detailsViewController.key = key
+        
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+ 
 
 }
 
@@ -117,10 +138,6 @@ extension Home: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-//        print(location.coordinate.latitude, location.coordinate.longitude)
-//        let coordenate1 = CLLocation(latitude: 51.58, longitude: -0.12)
-//        let distance = coordenate1.distance(from: location)
-//        print(distance)
         
         if let userid = Auth.auth().currentUser {
             
@@ -155,28 +172,10 @@ extension Home: CLLocationManagerDelegate{
 
 
                         })
-                        
-
-                    
-//                        _ = circleQuery.observe(.documentExited, with: { (key, location) in
-//                            print("The document with documentID '\(key)' Exited the search area and is at location '\(location)'")
-//
-//                            self.keys.removeObject(forKey: key!)
-//                            print("THESE ARE MY FUCKING KEYS \t", self.keys)
-//                            self.userDistances.removeAll()
-//                            self.userDistances = self.userDistance(keys: self.keys)
-//                            self.tableView.reloadData()
-//                        })
-
                     }
                 }
             }
-            
         }
-    
-//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        mapView.setRegion(region, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -195,7 +194,11 @@ extension Home: CLLocationManagerDelegate{
         self.ref.child("users").child(userDistances[indexPath.row].key).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let username = value?["username"] as? String ?? "ble"
-            cell.nameLabel.text = username
+            self.userDistances[indexPath.row].name = username
+            //cell.nameLabel.text = username
+            cell.nameButton.titleLabel!.text = username
+            cell.nameButton.setTitle(username, for: .normal)
+            
         })
         
         
@@ -226,4 +229,5 @@ extension Home: CLLocationManagerDelegate{
         return userArray
     }
 }
+
 

@@ -12,6 +12,7 @@ class User{
     
     var distance: Double!
     var key: String!
+    var name: String!
     
     init(key: String, distance : Double) {
         self.key = key
