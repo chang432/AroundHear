@@ -81,17 +81,184 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
-                                <rect key="frame" x="112" y="469" width="150" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
+                                <rect key="frame" x="112" y="563" width="150" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Start Chating!"/>
                                 <connections>
                                     <segue destination="rJl-WD-FZg" kind="show" id="qmV-Ud-0GU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FjM-RI-tXx" userLabel="profilePicture">
+                                <rect key="frame" x="112.5" y="114" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.79215686269999996" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZiZ-QQ-B0Z"/>
+                                    <constraint firstAttribute="width" constant="150" id="wS5-Fh-dWz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob Chang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-eM-wRO">
+                                <rect key="frame" x="87.5" y="272" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UF1-9q-KQl"/>
+                                    <constraint firstAttribute="height" constant="30" id="eEo-dt-7AG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTl-rk-aC5" userLabel="listenersContainer">
+                                <rect key="frame" x="285" y="321" width="74" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-Y3-6RS" userLabel="listeners">
+                                        <rect key="frame" x="17" y="0.0" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="CyN-pS-Mqo"/>
+                                            <constraint firstAttribute="width" constant="40" id="H9b-1e-EQu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listeners" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-ZU-c4i" userLabel="listenersLabel">
+                                        <rect key="frame" x="0.0" y="20" width="74" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="JEi-Dh-pR5"/>
+                                            <constraint firstAttribute="height" constant="20" id="TcZ-oC-4Fy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="A5W-ZU-c4i" firstAttribute="top" secondItem="Ias-Y3-6RS" secondAttribute="bottom" id="3Sf-5O-yxc"/>
+                                    <constraint firstItem="Ias-Y3-6RS" firstAttribute="centerX" secondItem="uTl-rk-aC5" secondAttribute="centerX" id="9Aq-q7-Bbg"/>
+                                    <constraint firstAttribute="bottom" secondItem="A5W-ZU-c4i" secondAttribute="bottom" id="Xr6-T5-sWN"/>
+                                    <constraint firstItem="Ias-Y3-6RS" firstAttribute="top" secondItem="uTl-rk-aC5" secondAttribute="top" id="fPk-Ce-bNa"/>
+                                    <constraint firstItem="A5W-ZU-c4i" firstAttribute="centerX" secondItem="uTl-rk-aC5" secondAttribute="centerX" id="hlQ-Ro-00k"/>
+                                    <constraint firstAttribute="width" constant="74" id="iy2-iT-4IY"/>
+                                    <constraint firstAttribute="height" constant="40" id="l99-67-0wm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNe-jq-pBG" userLabel="favSongContainer">
+                                <rect key="frame" x="87.5" y="352" width="200" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Rings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL5-Ld-N0B" userLabel="favSong">
+                                        <rect key="frame" x="76" y="20" width="48" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="CFy-ym-Wuk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.74276113509999997" blue="0.26768118140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-T9-O7M" userLabel="favSongLabel">
+                                        <rect key="frame" x="56" y="0.0" width="88" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="KyJ-K2-Mbk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wjL-T9-O7M" firstAttribute="top" secondItem="jNe-jq-pBG" secondAttribute="top" id="06F-sz-XXA"/>
+                                    <constraint firstItem="wjL-T9-O7M" firstAttribute="centerX" secondItem="jNe-jq-pBG" secondAttribute="centerX" id="DFl-Zr-RRe"/>
+                                    <constraint firstItem="SL5-Ld-N0B" firstAttribute="top" secondItem="wjL-T9-O7M" secondAttribute="bottom" id="ReV-pw-Led"/>
+                                    <constraint firstAttribute="width" constant="200" id="S4I-jL-baA"/>
+                                    <constraint firstItem="SL5-Ld-N0B" firstAttribute="centerX" secondItem="jNe-jq-pBG" secondAttribute="centerX" id="dro-Pf-JVK"/>
+                                    <constraint firstAttribute="height" constant="40" id="lGi-i6-B7E"/>
+                                    <constraint firstAttribute="bottom" secondItem="SL5-Ld-N0B" secondAttribute="bottom" id="rxO-Vt-n9N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmW-eL-cts" userLabel="likeContainer">
+                                <rect key="frame" x="16" y="321" width="60" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgE-GZ-Z6K" userLabel="likes">
+                                        <rect key="frame" x="10" y="0.0" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="32K-sB-p9m"/>
+                                            <constraint firstAttribute="height" constant="20" id="nss-ZV-DfZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-4z-Np4" userLabel="likesLabel">
+                                        <rect key="frame" x="10" y="20" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="avP-1O-5XA"/>
+                                            <constraint firstAttribute="width" constant="40" id="srY-Cj-3Ja"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mmK-4z-Np4" firstAttribute="centerX" secondItem="gmW-eL-cts" secondAttribute="centerX" id="0Tf-YV-gsc"/>
+                                    <constraint firstItem="DgE-GZ-Z6K" firstAttribute="centerX" secondItem="gmW-eL-cts" secondAttribute="centerX" id="BG9-Cc-Mfu"/>
+                                    <constraint firstItem="DgE-GZ-Z6K" firstAttribute="top" secondItem="gmW-eL-cts" secondAttribute="top" id="Ta2-d6-W8I"/>
+                                    <constraint firstAttribute="height" constant="40" id="UqE-3n-u5D"/>
+                                    <constraint firstAttribute="bottom" secondItem="mmK-4z-Np4" secondAttribute="bottom" id="bIu-Kk-lCD"/>
+                                    <constraint firstItem="mmK-4z-Np4" firstAttribute="top" secondItem="DgE-GZ-Z6K" secondAttribute="bottom" id="tvy-l2-HIV"/>
+                                    <constraint firstAttribute="width" constant="60" id="wNJ-07-e9y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-Wj-qt7">
+                                <rect key="frame" x="30" y="437" width="314" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Playing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li6-i9-tcV">
+                                        <rect key="frame" x="44" y="0.0" width="226" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="226" id="4ko-GR-tfG"/>
+                                            <constraint firstAttribute="height" constant="33" id="6T3-Cq-zfH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" red="0.63339811563491821" green="0.083822615444660187" blue="0.62832874059677124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-IP-vuN">
+                                        <rect key="frame" x="0.0" y="33" width="314" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Song title..... - Artist"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Li6-i9-tcV" firstAttribute="top" secondItem="9PQ-Wj-qt7" secondAttribute="top" id="3hA-Ig-j2v"/>
+                                    <constraint firstItem="Li6-i9-tcV" firstAttribute="centerX" secondItem="9PQ-Wj-qt7" secondAttribute="centerX" id="ITT-8u-CtK"/>
+                                    <constraint firstItem="P7j-IP-vuN" firstAttribute="top" secondItem="Li6-i9-tcV" secondAttribute="bottom" id="eSh-Dx-Mij"/>
+                                    <constraint firstAttribute="bottom" secondItem="P7j-IP-vuN" secondAttribute="bottom" id="z9d-ED-okY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FjM-RI-tXx" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="50" id="5uJ-8r-pJ4"/>
+                            <constraint firstItem="uTl-rk-aC5" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="257" id="EpH-2n-SNv"/>
+                            <constraint firstItem="A8x-FL-eqU" firstAttribute="trailing" secondItem="uTl-rk-aC5" secondAttribute="trailing" constant="16" id="JKj-v3-WnN"/>
+                            <constraint firstItem="FjM-RI-tXx" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="MLc-hI-6yr"/>
+                            <constraint firstItem="fNT-eM-wRO" firstAttribute="top" secondItem="FjM-RI-tXx" secondAttribute="bottom" constant="8" id="NAx-Wc-e86"/>
+                            <constraint firstItem="jNe-jq-pBG" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="QT2-na-Adr"/>
+                            <constraint firstItem="gmW-eL-cts" firstAttribute="leading" secondItem="A8x-FL-eqU" secondAttribute="leading" constant="16" id="QZD-CP-dxO"/>
+                            <constraint firstItem="jNe-jq-pBG" firstAttribute="top" secondItem="fNT-eM-wRO" secondAttribute="bottom" constant="50" id="XQf-X1-Y5t"/>
+                            <constraint firstItem="fNT-eM-wRO" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="Yyu-hO-Brv"/>
+                            <constraint firstItem="gmW-eL-cts" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="257" id="aWh-6m-LWP"/>
+                            <constraint firstItem="NUJ-L6-1Tz" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="ka8-KL-I7d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="A8x-FL-eqU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="nuw-QM-SZj"/>
@@ -101,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQf-x0-DOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="132"/>
+            <point key="canvasLocation" x="1684" y="131.78410794602701"/>
         </scene>
         <!--Name-->
         <scene sceneID="IEJ-4N-OpX">
@@ -192,6 +359,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homeTabIcon" width="18" height="18"/>
+        <image name="homeTabIcon" width="24" height="24"/>
     </resources>
 </document>

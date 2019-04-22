@@ -150,6 +150,8 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
                 print("playing!")
             }
         })
+        
+        
     }
     
     /*

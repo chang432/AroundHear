@@ -23,7 +23,7 @@ class PlaylistTracksViewController: UIViewController, UITableViewDelegate, UITab
         tracksTableView.delegate = self
         tracksTableView.dataSource = self
         
-        print("HELLOOOO: \(playlist)")
+        //print("HELLOOOO: \(playlist)")
         
         //setting up url for playlist tracks request
         var playlist_str = playlist.playableUri.absoluteString
@@ -54,7 +54,7 @@ class PlaylistTracksViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count: \(playlist.trackCount)")
+        //print("count: \(playlist.trackCount)")
         return Int(playlist.trackCount)
     }
     
@@ -84,14 +84,33 @@ class PlaylistTracksViewController: UIViewController, UITableViewDelegate, UITab
         return 60;//Choose your custom row height
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "SongIdentifier", sender: self)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tracksTableView.indexPathForSelectedRow?.row
+        
+        if (segue.identifier == "SongIdentifier") {
+            let vc = segue.destination as? SongViewController
+            
+            let one_plist = self.plist_arr[indexPath!] as! [String: AnyObject]
+            let plist = one_plist["track"] as! [String: AnyObject]
+            print("one_plist: \(plist["name"])")
+            
+            vc?.songTtle = plist["name"] as! String
+            vc?.songURI = plist["uri"] as! String
+            
+            //getting album image
+            if let album = plist["album"] as? [String:AnyObject] {
+                if let images = album["images"] as? [AnyObject] {
+                    let first_image = images[0]
+                    let mainImageURL =  URL(string: first_image["url"] as! String)
+                    let mainImageData = NSData(contentsOf: mainImageURL!)
+                    let mainImage = UIImage(data: mainImageData as! Data)
+                    vc!.songImg = mainImage
+                }
+            }
+        }
+    }
 }
