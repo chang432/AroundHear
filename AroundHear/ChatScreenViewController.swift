@@ -10,17 +10,27 @@ import UIKit
 import Firebase
 
 
-class ChatScreenViewController: UIViewController, UITextFieldDelegate {
-    
+class ChatScreenViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+
+
     
     @IBOutlet weak var messageTextField: UITextField!
     var key: String!
     let ref = Database.database().reference().child("messages")
+    var messages = [Message]()
+    var TableView: UITableView!
+    
+    
+    
     @IBOutlet weak var nameBar: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.TableView.dataSource = self
+//        self.TableView.delegate = self
+        
+    
         messageTextField.delegate = self as! UITextFieldDelegate
         observeMessages()
         // Do any additional setup after loading the view.
@@ -65,10 +75,24 @@ class ChatScreenViewController: UIViewController, UITextFieldDelegate {
 
             if let dictionary = snapshot.value as? [String: AnyObject]{
                 let message = Message()
-//                for item in dictionary{
-//                    message.text = item
-//                    print(message.text)
-//                }
+                for (key,value) in dictionary{
+                    if key == "text"{
+                        message.text = value as? String
+                    } else if key == "fromId" {
+                        message.fromId = value as? String
+                    } else if key == "toId"{
+                        message.toId = value as? String
+                    } else {
+                        message.timestamp = value
+                    }
+                    self.messages.append(message)
+                }
+                
+                print(message.fromId)
+                print(message.text)
+                print(message.timestamp)
+                print(message.toId)
+                
                 print(snapshot)
 //                message.setValuesForKeys(dictionary)
 //                print(message.text)
@@ -80,6 +104,15 @@ class ChatScreenViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         handleSend()
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
+        return cell
     }
 
 }
