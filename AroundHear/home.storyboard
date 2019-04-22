@@ -81,8 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
-                                <rect key="frame" x="112" y="563" width="150" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
+                                <rect key="frame" x="112.5" y="554" width="150" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Start Chating!"/>
                                 <connections>
@@ -217,10 +217,10 @@
                                     <constraint firstAttribute="width" constant="60" id="wNJ-07-e9y"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-Wj-qt7">
-                                <rect key="frame" x="30" y="437" width="314" height="69"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PQ-Wj-qt7">
+                                <rect key="frame" x="30.5" y="432" width="314" height="72"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currently Playing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li6-i9-tcV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Playing:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li6-i9-tcV">
                                         <rect key="frame" x="44" y="0.0" width="226" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="226" id="4ko-GR-tfG"/>
@@ -230,8 +230,12 @@
                                         <color key="textColor" red="0.63339811563491821" green="0.083822615444660187" blue="0.62832874059677124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-IP-vuN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-IP-vuN">
                                         <rect key="frame" x="0.0" y="33" width="314" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="SgY-Ib-YlZ"/>
+                                            <constraint firstAttribute="width" constant="314" id="kXX-2r-B5Q"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Song title..... - Artist"/>
                                     </button>
@@ -239,15 +243,26 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Li6-i9-tcV" firstAttribute="top" secondItem="9PQ-Wj-qt7" secondAttribute="top" id="3hA-Ig-j2v"/>
+                                    <constraint firstAttribute="trailing" secondItem="P7j-IP-vuN" secondAttribute="trailing" id="3ke-LZ-w5Q"/>
+                                    <constraint firstItem="P7j-IP-vuN" firstAttribute="leading" secondItem="9PQ-Wj-qt7" secondAttribute="leading" id="4vK-32-NWh"/>
                                     <constraint firstItem="Li6-i9-tcV" firstAttribute="centerX" secondItem="9PQ-Wj-qt7" secondAttribute="centerX" id="ITT-8u-CtK"/>
+                                    <constraint firstItem="P7j-IP-vuN" firstAttribute="centerX" secondItem="9PQ-Wj-qt7" secondAttribute="centerX" id="dwM-xt-RaO"/>
                                     <constraint firstItem="P7j-IP-vuN" firstAttribute="top" secondItem="Li6-i9-tcV" secondAttribute="bottom" id="eSh-Dx-Mij"/>
                                     <constraint firstAttribute="bottom" secondItem="P7j-IP-vuN" secondAttribute="bottom" id="z9d-ED-okY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO FRIEND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iL-Be-ViN">
+                                <rect key="frame" x="16" y="512" width="264" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FjM-RI-tXx" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="50" id="5uJ-8r-pJ4"/>
+                            <constraint firstItem="9PQ-Wj-qt7" firstAttribute="top" secondItem="jNe-jq-pBG" secondAttribute="bottom" constant="40" id="EKd-iI-dy2"/>
                             <constraint firstItem="uTl-rk-aC5" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="257" id="EpH-2n-SNv"/>
                             <constraint firstItem="A8x-FL-eqU" firstAttribute="trailing" secondItem="uTl-rk-aC5" secondAttribute="trailing" constant="16" id="JKj-v3-WnN"/>
                             <constraint firstItem="FjM-RI-tXx" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="MLc-hI-6yr"/>
@@ -258,6 +273,8 @@
                             <constraint firstItem="fNT-eM-wRO" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="Yyu-hO-Brv"/>
                             <constraint firstItem="gmW-eL-cts" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="257" id="aWh-6m-LWP"/>
                             <constraint firstItem="NUJ-L6-1Tz" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="ka8-KL-I7d"/>
+                            <constraint firstItem="9PQ-Wj-qt7" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="vrp-hW-PVK"/>
+                            <constraint firstItem="NUJ-L6-1Tz" firstAttribute="top" secondItem="9PQ-Wj-qt7" secondAttribute="bottom" constant="50" id="zV3-er-TP9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A8x-FL-eqU"/>
                     </view>
