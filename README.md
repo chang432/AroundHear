@@ -7,6 +7,12 @@
 1. [Wireframes](#Wireframes)
 
 
+## Sprint 4
+Be able to chat with users in your radious                    |Be able to see the sond tittle of what other users are listening in your set radious       |Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile      
+:------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
+<img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="https://i.imgur.com/EtNyQbw.png" width=250><br> 
+
+
 ## Sprint 3
 See list of users in your radious                             |Spotify Playlist       |User Story here      
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
@@ -68,13 +74,13 @@ A music social media app that lets users listen to what other users are currentl
 - [x] Be able to login with spotify api
 - [x] Get users location from GPS and update it on realtime database
 - [x] Be able to see list of users in your radious
-* Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile
-* Be able to chat with users in your radius
-* Be able to see the song title of what other users are listening to in your radius
+- [x] Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile
+- [x] Be able to chat with users in your radius
+- [x] Be able to see the song title of what other users are listening to in your radius
 - [x] Be able to logout
 - [x] be able to sign in or sign up
 * Be able to play/broadcast your music in real time to other users in the set radius
-* Be able to view your spotify lists and search for songs on spotify
+- [x] Be able to view your spotify lists and search for songs on spotify
 - [x] Be able to listen to music from spotify
 * Be able to send a like to a user currently playing music in the radius
 * Be able to receive a notification of a like from another user while you are playing music
