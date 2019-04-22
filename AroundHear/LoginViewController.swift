@@ -107,51 +107,7 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
                 print(AuthService.instance.sessionuserId!)
                 
             }
-            
-            // Method 1 : To get current user's playlist
-            SPTPlaylistList.playlists(forUser: session.canonicalUsername, withAccessToken: session.accessToken, callback: { (error, response) in
-                if let listPage = response as? SPTPlaylistList, let playlists = listPage.items as? [SPTPartialPlaylist] {
-                    //print(playlists)   // or however you want to parse these
-                    //  self.myplaylists = playlists
-                    //self.myplaylists.append(contentsOf: playlists)
-                    //print(self.myplaylists)
-                }
-            })
-            
-            /*// Method 2 : To get current user's playlist
-            let playListRequest = try! SPTPlaylistList.createRequestForGettingPlaylists(forUser: AuthService.instance.sessionuserId ?? "", withAccessToken: AuthService.instance.sessiontokenId ?? "")
-            Alamofire.request(playListRequest)
-                .response { response in
-                    
-                    
-                    let list = try! SPTPlaylistList(from: response.data, with: response.response)
-                    
-                    for playList in list.items  {
-                        if let playlist = playList as? SPTPartialPlaylist {
-                            print( playlist.name! ) // playlist name
-                            print( playlist.uri!)    // playlist uri
-                        }}
-            }*/
         }
-    }
-    
-    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
-        // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
-        print("logged in")
-        SPTUser.requestCurrentUser(withAccessToken: session.accessToken) { (error, data) in
-            guard let user = data as? SPTUser else { print("Couldn't cast as SPTUser"); return }
-            AuthService.instance.sessionuserId = user.canonicalUserName
-            print(AuthService.instance.sessionuserId!)
-        }
-        
-        //Plays a song
-        self.player?.playSpotifyURI("spotify:track:63bAGRSSX2V1hhPSP2NpBC", startingWith: 0, startingWithPosition: 0, callback: { (error) in
-            if (error != nil) {
-                print("playing!")
-            }
-        })
-        
-        
     }
     
     /*
