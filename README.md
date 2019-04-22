@@ -8,9 +8,9 @@
 
 
 ## Sprint 4
-Be able to chat with users in your radious                    |Be able to see the sond tittle of what other users are listening in your set radius       |Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile      
+Be able to chat with users in your radius                    |Be able to see the sond tittle of what other users are listening in your set radius       |Be able to click on a user in your set radius and listen to whatever they are listening to currently or access their profile      
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
-<img src="http://g.recordit.co/B9UnJckTjf.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="https://i.imgur.com/EtNyQbw.png" width=250><br> 
+<img src="http://g.recordit.co/B9UnJckTjf.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="https://i.imgur.com/VMksjqr.gif" width=250><br> 
 
 
 ## Sprint 3
