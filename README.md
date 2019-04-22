@@ -14,7 +14,7 @@ Be able to chat with users in your radious                    |Be able to see th
 
 
 ## Sprint 3
-See list of users in your radious                             |Spotify Playlist       |User Story here      
+See list of users in your radius                             |Spotify Playlist       |User Story here      
 :------------------------------------------------------------:|:---------------------------------------------------------:|-----------------------------------------------------------:
 <img src="http://g.recordit.co/OiRa2h0Gcb.gif" width=250><br> | <img src="https://imgur.com/nHF3Un1.gif" width=250><br> | <img src="https://i.imgur.com/EtNyQbw.png" width=250><br> 
 
