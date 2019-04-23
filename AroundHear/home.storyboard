@@ -237,7 +237,7 @@
                                             <constraint firstAttribute="width" constant="314" id="kXX-2r-B5Q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Song title..... - Artist"/>
+                                        <state key="normal" title="The North Face - Odie"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,13 +251,6 @@
                                     <constraint firstAttribute="bottom" secondItem="P7j-IP-vuN" secondAttribute="bottom" id="z9d-ED-okY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO FRIEND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iL-Be-ViN">
-                                <rect key="frame" x="16" y="512" width="264" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -281,6 +274,7 @@
                     <navigationItem key="navigationItem" title="Name" id="nuw-QM-SZj"/>
                     <connections>
                         <outlet property="nameBar" destination="nuw-QM-SZj" id="3wf-mb-ngV"/>
+                        <outlet property="song" destination="P7j-IP-vuN" id="09Y-6f-6WI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQf-x0-DOA" userLabel="First Responder" sceneMemberID="firstResponder"/>

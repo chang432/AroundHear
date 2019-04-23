@@ -193,6 +193,7 @@
 				99A7C5A12249C17D0038B413 /* LoginRegisterViewController.swift */,
 				999BAE1C224DD6EA000F4C3E /* WelcomeVIewController.swift */,
 				999C78A1224D79CA009935C5 /* Home.swift */,
+				995712C4226CB72900485825 /* UserDetailsViewController.swift */,
 				6D5DBB472263C2EF00A0F162 /* MusicViewController.swift */,
 				6D7817AE2263D8240053C60B /* playlistTableViewCell.swift */,
 				6D7817B0226983690053C60B /* PlaylistTracksViewController.swift */,
@@ -205,10 +206,8 @@
 				998532712262871100C7A7B8 /* User.swift */,
 				6DEAA4F6225FDD6F0003EA8D /* ProfileViewController.swift */,
 				6DEAA4F8225FF6C60003EA8D /* UIView+Extension.swift */,
-				995712C4226CB72900485825 /* UserDetailsViewController.swift */,
 				995712C6226CDCA600485825 /* ChatScreenViewController.swift */,
 				991E81C8226D29EC000ABF38 /* Message.swift */,
-
 			);
 			path = AroundHear;
 			sourceTree = "<group>";

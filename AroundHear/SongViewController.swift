@@ -21,6 +21,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     var songImg: UIImage!
     var songTtle: String!
     var songURI: String!
+    var songArtist: String!
     var auth = SPTAuth.defaultInstance()!
     var player: SPTAudioStreamingController?
     var session:SPTSession!
@@ -83,8 +84,9 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController) {
         print("LOGGED INTO SESSION")
-        
-        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").setValue(songURI)
+    Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").setValue(songURI)
+    Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_name").setValue(songTtle)
+    Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_artist").setValue(songArtist)
         
         SPTAudioStreamingController.sharedInstance().playSpotifyURI(songURI, startingWith: 0, startingWithPosition: 10) { error in
             if error != nil {
@@ -102,7 +104,9 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
         print("shared instance!!!!!!!!!!!!!: \(SPTAudioStreamingController.sharedInstance())")
         
         if SPTAudioStreamingController.sharedInstance().loggedIn {
-        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").setValue(songURI)
+        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_uri").setValue(songURI)
+        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_name").setValue(songTtle)
+        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_artist").setValue(songArtist)
             
             SPTAudioStreamingController.sharedInstance().playSpotifyURI(songURI, startingWith: 0, startingWithPosition: 10) { error in
                 if error != nil {

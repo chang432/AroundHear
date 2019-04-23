@@ -10,14 +10,18 @@ import UIKit
 
 class UserDetailsViewController: UIViewController {
     
+    @IBOutlet var song: UIButton!
     
     @IBOutlet weak var nameBar: UINavigationItem!
     var key: String!
+    var songURI: String!
+    var songTitle: String!
+    var songArtist: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-
+        song.titleLabel?.text = songTitle
         // Do any additional setup after loading the view.
     }
     

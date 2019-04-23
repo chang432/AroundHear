@@ -101,6 +101,12 @@ class PlaylistTracksViewController: UIViewController, UITableViewDelegate, UITab
             vc?.songTtle = plist["name"] as! String
             vc?.songURI = plist["uri"] as! String
             
+            //Getting artist
+            let artists_arr = plist["artists"] as! [AnyObject]
+            //only get first artist (if more time add all of them)
+            let artist_obj = artists_arr[0] as! [String: AnyObject]
+            vc?.songArtist = artist_obj["name"] as? String
+            
             //getting album image
             if let album = plist["album"] as? [String:AnyObject] {
                 if let images = album["images"] as? [AnyObject] {

@@ -17,9 +17,9 @@ import Geofirestore
 
 class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    
-
-    
+    var track_artist: String!
+    var track_name: String!
+    var track_uri: String!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -110,6 +110,18 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+    Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").observeSingleEvent(of: .value, with: {(snapshot) in
+        
+        //let value = snapshot.value
+        let value = snapshot.value as? NSDictionary
+        self.track_artist = value?["track_artist"] as? String
+        self.track_name = value?["track_name"] as? String
+        self.track_uri = value?["track_uri"] as? String
+
+        
+    }, withCancel: nil)
+        
         let button = sender as! UIButton
         
         //let indexPath = tableView.indexPath(for: cell)!
@@ -124,7 +136,9 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let detailsViewController = segue.destination as! UserDetailsViewController
         detailsViewController.nameBar.title = name
         detailsViewController.key = key
-        
+        detailsViewController.songTitle = track_name
+        detailsViewController.songURI = track_uri
+        detailsViewController.songArtist = track_artist
         //tableView.deselectRow(at: indexPath, animated: true)
     }
  
@@ -210,7 +224,6 @@ extension Home: CLLocationManagerDelegate{
         
         return cell
     }
-    
     
     func userDistance(keys: NSMutableDictionary) -> Array<User>{
         
