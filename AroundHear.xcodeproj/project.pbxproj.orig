@@ -731,7 +731,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrechang/Desktop/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+=======
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohith/Documents/iOS Dev/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+>>>>>>> 682d4199d93617e458474e971d72ef1f90b2d0cb
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -756,7 +760,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrechang/Desktop/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+=======
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohith/Documents/iOS Dev/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+>>>>>>> 682d4199d93617e458474e971d72ef1f90b2d0cb
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

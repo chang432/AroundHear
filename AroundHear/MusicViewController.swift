@@ -120,6 +120,10 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let mainImage = UIImage(data: mainImageData as! Data)
         cell!.playlistPic.image = mainImage
         
+        //cell?.contentView.setGradientBackground(colorOne: UIColor.init(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1.0), colorTwo: UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0))
+        
+        cell?.contentView.backgroundColor = UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0)
+        
         return cell!
     }
     

@@ -9,32 +9,39 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import Alamofire
 
 class ProfileViewController: UIViewController {
     
-    
+    typealias JSONStandard = [String : AnyObject]
     
     override func viewDidLoad() {
         
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(AuthService.instance.tokenId!)",
+            "Accept": "application/json"
+        ]
         
-        /*var url : String = "https://api.spotify.com/v1/me/top/artists"
-        var request : NSMutableURLRequest = NSMutableURLRequest()
-        request.url = NSURL(string: url)! as URL
-        request.httpMethod = "GET"
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue(), completionHandler:{ (response:URLResponse!, data: NSData!, error: NSError!) -> Void in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
-            
-            if (jsonResult != nil) {
-                // process jsonResult
-            } else {
-                // couldn't load JSON, look at error
-            }
-            
-            
-        })*/
+        Alamofire.request("https://api.spotify.com/v1/me/top/artists", headers: headers).responseJSON(completionHandler: {
+            response in
+            do {
+                var JSONStuff = try JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! JSONStandard
+                print("JSON VALUUES")
+                print(JSONStuff)
+                
+               // self.plist_arr = JSONStuff["items"] as! [AnyObject]
 
+            }
+            catch {
+                print("THERE IS AN ERROR WITH JSON")
+                print(error)
+            }
+        })
+        
+        
+        
+        
+        ///
 
 
         
@@ -50,8 +57,8 @@ class ProfileViewController: UIViewController {
         
         
         super.viewDidLoad()
-
-        view.setGradientBackground(colorOne: UIColor.cyan, colorTwo: UIColor.lightGray)
+        
+        view.setGradientBackground(colorOne: UIColor.init(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1.0), colorTwo: UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0))
         // Do any additional setup after loading the view.
     }
     
