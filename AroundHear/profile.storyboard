@@ -192,6 +192,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currSongnName" destination="DrS-JN-X5w" id="ZFk-BM-Naw"/>
+                        <outlet property="profileName" destination="ank-Wa-BT0" id="xZ6-sl-IwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apk-Q3-EJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +254,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profileTabIcon" width="24" height="24"/>
+        <image name="profileTabIcon" width="18" height="18"/>
     </resources>
 </document>

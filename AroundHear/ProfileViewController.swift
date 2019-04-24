@@ -8,15 +8,60 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ProfileViewController: UIViewController {
     
+    
+    
     override func viewDidLoad() {
+        
+        
+        /*var url : String = "https://api.spotify.com/v1/me/top/artists"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.url = NSURL(string: url)! as URL
+        request.httpMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue(), completionHandler:{ (response:URLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+            
+            if (jsonResult != nil) {
+                // process jsonResult
+            } else {
+                // couldn't load JSON, look at error
+            }
+            
+            
+        })*/
+
+
+
+        
+        let ref = Database.database().reference()
+        
+        ref.child("users").child((Auth.auth().currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let username = value?["username"] as? String ?? "Uknown User"
+            
+        self.profileName.text = username
+        })
+        
+        
+        
         super.viewDidLoad()
 
         view.setGradientBackground(colorOne: UIColor.cyan, colorTwo: UIColor.lightGray)
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var currSongnName: UILabel!
+    
+    
+    
+    
+    
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         print("HELLO")
