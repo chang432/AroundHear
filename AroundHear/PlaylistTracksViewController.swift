@@ -74,6 +74,8 @@ class PlaylistTracksViewController: UIViewController, UITableViewDelegate, UITab
             cell?.trackArtist.text = artist_obj["name"] as? String
             
         }
+        
+        cell?.contentView.backgroundColor = UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0)
 
         //print("asdf: \(self.plist_arr.count)")
         
