@@ -85,7 +85,11 @@ class LoginViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, 
             self.player = SPTAudioStreamingController.sharedInstance()
             self.player!.playbackDelegate = self
             self.player!.delegate = self
-            try! player?.start(withClientId: auth.clientID)
+            do {
+                try player?.start(withClientId: auth.clientID)
+            } catch {
+                print("Failed to start with clientId")
+            }
             self.player!.login(withAccessToken: authSession.accessToken)
         }
     }
