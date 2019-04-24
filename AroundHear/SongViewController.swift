@@ -19,6 +19,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     @IBOutlet var songTitle: UILabel!
     @IBOutlet var playPauseBtn: UIButton!
     var songImg: UIImage!
+    var songImgURL: String!
     var songTtle: String!
     var songURI: String!
     var songArtist: String!
@@ -29,7 +30,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("VIEWDIDLOAD")
+        
         playSwitch = 0
         songImage.image = songImg
         songTitle.text = songTtle
@@ -64,7 +65,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
         SPTAudioStreamingController.sharedInstance().setIsPlaying(!SPTAudioStreamingController.sharedInstance().playbackState.isPlaying, callback: nil)
     }
     
-    func initializePlayer(authSession:SPTSession){
+    /*func initializePlayer(authSession:SPTSession){
         if self.player == nil {
             self.player = SPTAudioStreamingController.sharedInstance()
             self.player!.playbackDelegate = self
@@ -72,7 +73,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
             try! player?.start(withClientId: auth.clientID)
             self.player!.login(withAccessToken: authSession.accessToken)
         }
-    }
+    }*/
     
     override func viewDidAppear(_ animated: Bool) {
     }
@@ -87,6 +88,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").setValue(songURI)
     Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_name").setValue(songTtle)
     Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_artist").setValue(songArtist)
+    Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_image").setValue(songImgURL)
         
         SPTAudioStreamingController.sharedInstance().playSpotifyURI(songURI, startingWith: 0, startingWithPosition: 10) { error in
             if error != nil {
@@ -107,6 +109,7 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
         Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_uri").setValue(songURI)
         Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_name").setValue(songTtle)
         Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_artist").setValue(songArtist)
+        Database.database().reference().child("users").child(((Auth.auth().currentUser?.uid)!)).child("song").child("track_image").setValue(songImgURL)
             
             SPTAudioStreamingController.sharedInstance().playSpotifyURI(songURI, startingWith: 0, startingWithPosition: 10) { error in
                 if error != nil {

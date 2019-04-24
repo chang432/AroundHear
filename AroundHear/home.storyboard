@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="uev-x2-FWq">
             <objects>
-                <viewController id="sbv-JC-y6m" customClass="Home" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OtherUserIdentifier" id="sbv-JC-y6m" customClass="Home" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LWC-ga-cQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <segue destination="Xkt-Ts-GTK" kind="show" id="H0O-AV-kJ6"/>
+                                                        <segue destination="Xkt-Ts-GTK" kind="show" id="p3s-gL-aUX"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -237,7 +237,10 @@
                                             <constraint firstAttribute="width" constant="314" id="kXX-2r-B5Q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="The North Face - Odie"/>
+                                        <state key="normal" title="North Face Odie"/>
+                                        <connections>
+                                            <action selector="songBtnPressed:" destination="Xkt-Ts-GTK" eventType="touchUpInside" id="0G0-oQ-xgS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,7 +277,8 @@
                     <navigationItem key="navigationItem" title="Name" id="nuw-QM-SZj"/>
                     <connections>
                         <outlet property="nameBar" destination="nuw-QM-SZj" id="3wf-mb-ngV"/>
-                        <outlet property="song" destination="P7j-IP-vuN" id="09Y-6f-6WI"/>
+                        <outlet property="track" destination="P7j-IP-vuN" id="3hh-f4-pQG"/>
+                        <segue destination="THf-Mb-xzF" kind="show" identifier="otherUserSongIdentifier" id="eF7-6x-4iQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQf-x0-DOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,6 +371,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctH-hC-VFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-116" y="131.78410794602701"/>
+        </scene>
+        <!--Other User Song View Controller-->
+        <scene sceneID="725-J2-0sH">
+            <objects>
+                <viewController id="THf-Mb-xzF" customClass="OtherUserSongViewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R3b-Dc-ioD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRr-ve-fsA" userLabel="SongImage">
+                                <rect key="frame" x="67" y="102" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-Mr-9af" userLabel="SongTitle">
+                                <rect key="frame" x="67" y="361" width="240" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AY6-qs-XiW" userLabel="PlayPauseBtn">
+                                <rect key="frame" x="139" y="531" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Play/Pause"/>
+                                <connections>
+                                    <action selector="playPausePressed:" destination="THf-Mb-xzF" eventType="touchUpInside" id="AGL-gN-8cK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sne-Oc-1zw"/>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseBtn" destination="AY6-qs-XiW" id="ueU-kX-FeQ"/>
+                        <outlet property="songImage" destination="VRr-ve-fsA" id="Rku-Lh-fhS"/>
+                        <outlet property="songTitle" destination="Uf9-Mr-9af" id="80N-g0-Bei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vW6-2U-bGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2518" y="913"/>
         </scene>
     </scenes>
     <resources>
