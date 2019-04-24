@@ -756,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohith/Documents/iOS Dev/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrechang/Desktop/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

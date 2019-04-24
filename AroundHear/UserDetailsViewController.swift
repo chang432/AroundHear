@@ -24,9 +24,9 @@ class UserDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-            self.profileName.text = self.nameBar.title
+        view.setGradientBackground(colorOne: UIColor.init(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1.0), colorTwo: UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0))
         
+        self.profileName.text = self.nameBar.title
     Database.database().reference().child("users").child(key).child("song").observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
         
