@@ -24,6 +24,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.setGradientBackground(colorOne: UIColor.init(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1.0), colorTwo: UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0))
+        
         //self.view.backgroundColor = UIColor .orange
         signUpButton.layer.cornerRadius = signUpButton.frame.height/2
         usernameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
