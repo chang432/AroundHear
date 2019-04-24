@@ -35,10 +35,11 @@ class UserDetailsViewController: UIViewController {
             self.songURI = value?["track_uri"] as? String
             var songImageURL = value?["track_image"] as? String
     
-            let mainImageURL =  URL(string: songImageURL!)
-            let mainImageData = NSData(contentsOf: mainImageURL!)
-            let mainImage = UIImage(data: mainImageData as! Data)
-            self.songImage = mainImage
+            if let mainImageURL =  URL(string: songImageURL!) {
+                let mainImageData = NSData(contentsOf: mainImageURL)
+                let mainImage = UIImage(data: mainImageData as! Data)
+                self.songImage = mainImage
+            }
         
             let songTitleArtist = self.songTitle
             self.track.setTitle(songTitleArtist, for: .normal)

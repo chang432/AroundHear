@@ -31,6 +31,8 @@ class SongViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.setGradientBackground(colorOne: UIColor.init(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1.0), colorTwo: UIColor.init(red: 155/255.0, green: 35/255.0, blue: 234/255.0, alpha: 1.0))
+        
         playSwitch = 0
         songImage.image = songImg
         songTitle.text = songTtle
