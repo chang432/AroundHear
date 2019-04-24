@@ -44,13 +44,16 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let color = UIColor(red: 95/255.0, green: 114/255.0, blue: 189/255.0, alpha: 1)
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
         myRefreshControl.addTarget(self, action: #selector(checkLocations), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+
+        //self.navigationController?.navigationBar.barTintColor = color
         
         db = Firestore.firestore()
         usersref = db.collection("users")
@@ -206,6 +209,7 @@ extension Home: CLLocationManagerDelegate{
             //cell.nameLabel.text = username
             cell.nameButton.titleLabel!.text = username
             cell.nameButton.setTitle(username, for: .normal)
+            
             
         })
         
