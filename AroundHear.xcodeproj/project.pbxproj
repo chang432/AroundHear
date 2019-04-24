@@ -214,7 +214,6 @@
 				995712C6226CDCA600485825 /* ChatScreenViewController.swift */,
 				991E81C8226D29EC000ABF38 /* Message.swift */,
 				995CAEFC226D5A2000882DE9 /* ChatTableViewCell.swift */,
-
 			);
 			path = AroundHear;
 			sourceTree = "<group>";
@@ -732,7 +731,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohith/Documents/iOS Dev/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrechang/Desktop/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.AroundHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rohith/Documents/iOS Dev/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/andrechang/Desktop/AroundHear/AroundHear/AroundHear-Bridging-Header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
