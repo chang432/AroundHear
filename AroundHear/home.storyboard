@@ -79,16 +79,8 @@
                 <viewController hidesBottomBarWhenPushed="YES" id="Xkt-Ts-GTK" customClass="UserDetailsViewController" customModule="AroundHear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cNl-1C-PPr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
-                                <rect key="frame" x="112.5" y="554" width="150" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Start Chating!"/>
-                                <connections>
-                                    <segue destination="rJl-WD-FZg" kind="show" id="qmV-Ud-0GU"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FjM-RI-tXx" userLabel="profilePicture">
                                 <rect key="frame" x="112.5" y="114" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.79215686269999996" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -102,7 +94,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob Chang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-eM-wRO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNT-eM-wRO">
                                 <rect key="frame" x="87.5" y="272" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="UF1-9q-KQl"/>
@@ -254,6 +246,14 @@
                                     <constraint firstAttribute="bottom" secondItem="P7j-IP-vuN" secondAttribute="bottom" id="z9d-ED-okY"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-L6-1Tz">
+                                <rect key="frame" x="155" y="549" width="65" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Message" image="message"/>
+                                <connections>
+                                    <segue destination="rJl-WD-FZg" kind="show" id="qmV-Ud-0GU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -268,15 +268,14 @@
                             <constraint firstItem="jNe-jq-pBG" firstAttribute="top" secondItem="fNT-eM-wRO" secondAttribute="bottom" constant="50" id="XQf-X1-Y5t"/>
                             <constraint firstItem="fNT-eM-wRO" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="Yyu-hO-Brv"/>
                             <constraint firstItem="gmW-eL-cts" firstAttribute="top" secondItem="A8x-FL-eqU" secondAttribute="top" constant="257" id="aWh-6m-LWP"/>
-                            <constraint firstItem="NUJ-L6-1Tz" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="ka8-KL-I7d"/>
                             <constraint firstItem="9PQ-Wj-qt7" firstAttribute="centerX" secondItem="cNl-1C-PPr" secondAttribute="centerX" id="vrp-hW-PVK"/>
-                            <constraint firstItem="NUJ-L6-1Tz" firstAttribute="top" secondItem="9PQ-Wj-qt7" secondAttribute="bottom" constant="50" id="zV3-er-TP9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A8x-FL-eqU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="nuw-QM-SZj"/>
                     <connections>
-                        <outlet property="nameBar" destination="nuw-QM-SZj" id="3wf-mb-ngV"/>
+                        <outlet property="nameBar" destination="nuw-QM-SZj" id="BU8-9q-1ak"/>
+                        <outlet property="profileName" destination="fNT-eM-wRO" id="8GC-B4-cSr"/>
                         <outlet property="track" destination="P7j-IP-vuN" id="3hh-f4-pQG"/>
                         <segue destination="THf-Mb-xzF" kind="show" identifier="otherUserSongIdentifier" id="eF7-6x-4iQ"/>
                     </connections>
@@ -469,5 +468,6 @@
     </scenes>
     <resources>
         <image name="homeTabIcon" width="18" height="18"/>
+        <image name="message" width="128" height="128"/>
     </resources>
 </document>

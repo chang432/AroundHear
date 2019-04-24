@@ -11,6 +11,7 @@ import Firebase
 
 class UserDetailsViewController: UIViewController {
     
+    @IBOutlet weak var profileName: UILabel!
     @IBOutlet var track: UIButton!
     
     @IBOutlet weak var nameBar: UINavigationItem!
@@ -22,6 +23,9 @@ class UserDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+            self.profileName.text = self.nameBar.title
         
     Database.database().reference().child("users").child(key).child("song").observeSingleEvent(of: .value, with: {(snapshot) in
             let value = snapshot.value as? NSDictionary
