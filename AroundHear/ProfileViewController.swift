@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController {
         
         super.viewDidLoad()
 
-        view.setGradientBackground(colorOne: UIColor.cyan, colorTwo: UIColor.lightGray)
+        view.setGradientBackground(colorOne: UIColor.darkGray, colorTwo: UIColor.lightGray)
         // Do any additional setup after loading the view.
     }
     
