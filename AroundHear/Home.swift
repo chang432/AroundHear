@@ -36,7 +36,8 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var userDistances: Array<User> = Array<User>()
     
     @IBOutlet weak var nameButton: UIButton!
-    
+    let myRefreshControl = UIRefreshControl()
+    var lastlocation: CLLocation!
     
 
     
@@ -44,8 +45,13 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         
         
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        myRefreshControl.addTarget(self, action: #selector(checkLocations), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
+        
         db = Firestore.firestore()
         usersref = db.collection("users")
         geoFirestore = GeoFirestore(collectionRef: self.usersref)
@@ -53,6 +59,11 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         
         checkLocationServices()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.checkLocationServices()
     }
 
     
@@ -70,7 +81,7 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func checkLocationServices() {
+    @objc func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled(){
             setUpLocationManger()
             checkLocationAuthorization()
@@ -79,7 +90,7 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func checkLocationAuthorization() {
+    @objc func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             //mapView.showsUserLocation = true
@@ -134,6 +145,7 @@ extension Home: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
+        self.lastlocation = locations.last
         if let userid = Auth.auth().currentUser {
             
             //updating firebase with new location... maybe remove this?
@@ -164,6 +176,7 @@ extension Home: CLLocationManagerDelegate{
                             self.userDistances.removeAll()
                             self.userDistances = self.userDistance(keys: self.keys)
                             self.tableView.reloadData()
+                        
 
 
                         })
@@ -221,6 +234,50 @@ extension Home: CLLocationManagerDelegate{
         }
         
         return userArray
+    }
+    
+    @objc func checkLocations() {
+        
+        
+        if let userid = Auth.auth().currentUser {
+            
+            //updating firebase with new location... maybe remove this?
+            ref.child("users").child(userid.uid).child("coordenates").updateChildValues(["latitude": self.lastlocation.coordinate.latitude, "longitude": self.lastlocation.coordinate.longitude])
+            
+            //creating a geopoint for the new location
+            //var loc = GeoPoint.init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            
+            //Updating the current users location in the firestore database
+            self.geoFirestore.setLocation(geopoint: GeoPoint(latitude: self.lastlocation.coordinate.latitude, longitude: self.lastlocation.coordinate.longitude), forDocumentWithID: userid.uid) { (error) in
+                if (error != nil) {
+                    print("An error occured")
+                } else {
+                    print("Saved location successfully!")
+                    //center of the radious to search
+                    self.center = CLLocation(latitude: self.lastlocation.coordinate.latitude, longitude: self.lastlocation.coordinate.longitude)
+                    //query the database
+                    self.keys.removeAllObjects()
+                    let circleQuery = self.geoFirestore.query(withCenter: self.center, radius: 50)
+                    
+                    _ = circleQuery.observeReady {
+                        
+                        _ = circleQuery.observe(.documentEntered, with: { (key, location) in
+                            print("The document with documentID '\(key)' ENTERED the search area and is at location '\(location)'")
+                            
+                            
+                            self.keys.setValue(location as Any, forKey: key!)
+                            self.userDistances.removeAll()
+                            self.userDistances = self.userDistance(keys: self.keys)
+                            self.tableView.reloadData()
+                            self.myRefreshControl.endRefreshing()
+                            
+                            
+                        })
+                    }
+                }
+            }
+        }
+        
     }
 }
 
