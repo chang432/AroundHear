@@ -16,10 +16,6 @@ import Geofirestore
 
 
 class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
-    
-
-    
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -110,22 +106,21 @@ class Home: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+  
         let button = sender as! UIButton
-        
-        //let indexPath = tableView.indexPath(for: cell)!
-        //Pass the selected movie to the details view controller
+
         let name = button.titleLabel?.text
         var key: String!
-        for item in userDistances{
+        for item in self.userDistances{
             if item.name == name{
                 key = item.key
             }
         }
+    
         let detailsViewController = segue.destination as! UserDetailsViewController
         detailsViewController.nameBar.title = name
         detailsViewController.key = key
-        
-        //tableView.deselectRow(at: indexPath, animated: true)
+
     }
  
 
@@ -210,7 +205,6 @@ extension Home: CLLocationManagerDelegate{
         
         return cell
     }
-    
     
     func userDistance(keys: NSMutableDictionary) -> Array<User>{
         
